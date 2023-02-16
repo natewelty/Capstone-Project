@@ -1,6 +1,7 @@
 package com.cogent.service;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +36,7 @@ public class UserService {
 		userRepository.save(user);
 	}
 	
+	public List<User> readAll(){
+		return userRepository.findAll();
+	}
 }
