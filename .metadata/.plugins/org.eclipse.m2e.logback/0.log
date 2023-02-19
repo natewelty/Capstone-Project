@@ -134,3 +134,211 @@
 2023-02-13 13:37:06,472 [Worker-51: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-02-13 13:37:06,478 [Worker-51: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-02-13 13:37:06,480 [Worker-51: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 09:56:55,204 [Worker-23: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-18 09:57:34,442 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 09:57:34,451 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 09:57:34,454 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 09:57:48,904 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 09:57:48,909 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 09:57:48,911 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 09:58:24,324 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 09:58:24,331 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 09:58:24,333 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:00:13,263 [Worker-16: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:00:13,617 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:00:13,618 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:00:13,620 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:00:16,854 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 10:00:16,862 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:00:16,864 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:00:28,727 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-18 10:00:28,847 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:00:29,138 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/main/java
+2023-02-18 10:00:29,138 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:00:29,138 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:00:29,139 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/test/java
+2023-02-18 10:00:29,406 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-02-18 10:02:07,693 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-18 10:02:07,806 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:02:08,045 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/main/java
+2023-02-18 10:02:08,045 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:02:08,045 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:02:08,045 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/test/java
+2023-02-18 10:02:08,279 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-02-18 10:02:16,068 [Worker-1: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:02:16,339 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:02:16,339 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:02:16,341 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:02:17,591 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 10:02:17,602 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:02:17,603 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:04:06,709 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-18 10:04:17,936 [Worker-15: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:04:18,328 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 10:04:18,339 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:04:18,342 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:04:34,353 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:04:34,633 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:04:34,633 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 10:04:34,636 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 10:04:45,434 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-02-18 10:04:45,563 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 10:04:45,852 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/main/java
+2023-02-18 10:04:45,852 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:04:45,852 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /do-connect-capstone-project/src/main/resources
+2023-02-18 10:04:45,853 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /do-connect-capstone-project/src/test/java
+2023-02-18 10:04:46,120 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-02-18 11:08:37,390 [Worker-53: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.capstone:spring-capstone-project:0.0.1-SNAPSHOT @ C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\pom.xml.
+2023-02-18 11:08:37,836 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:08:37,848 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:08:37,850 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:10:21,207 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-18 11:20:24,354 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:20:24,366 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:20:24,369 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:23:52,892 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:23:52,897 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:23:52,900 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:26:10,597 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:26:10,601 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:26:10,603 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:26:26,458 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:26:26,462 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:26:26,465 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:26:39,511 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:26:39,515 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:26:39,517 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:29:10,720 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:29:10,744 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:29:10,748 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:29:16,565 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:29:16,570 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:29:16,572 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:29:22,503 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:29:22,507 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:29:22,510 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:29:29,525 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:29:29,530 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:29:29,532 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-18 11:29:32,858 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-18 11:29:32,862 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-18 11:29:32,865 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:06:34,840 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-02-19 12:07:53,437 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:07:53,447 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:07:53,449 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:08:12,602 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:08:12,606 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:08:12,608 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:08:15,011 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:08:15,016 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:08:15,019 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:09:49,801 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:09:49,805 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:09:49,807 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:10:22,618 [Worker-11: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:10:22,624 [Worker-11: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:10:22,627 [Worker-11: Launching do-connect-capstone-project - DoConnectCapstoneProjectApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:12:16,621 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:12:16,643 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:12:16,645 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:21:15,169 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-02-19 12:25:33,123 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:25:33,133 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:25:33,137 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:27:05,932 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:27:05,937 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:27:05,941 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:27:15,005 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:27:15,047 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:27:15,051 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:27:30,248 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:27:30,252 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:27:30,255 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:28:02,274 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:28:02,278 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:28:02,280 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:28:27,952 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:28:27,956 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:28:27,959 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:28:46,200 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:28:46,207 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:28:46,210 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:30:04,338 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:30:04,342 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:30:04,346 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:30:26,681 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:30:26,685 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:30:26,686 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:30:49,307 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:30:49,311 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:30:49,314 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:31:13,338 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:31:13,341 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:31:13,344 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:31:22,995 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:31:23,000 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:31:23,002 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:44:55,648 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:44:55,652 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:44:55,654 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:48:32,906 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:48:32,912 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:48:32,914 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:49:02,580 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:49:02,584 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:49:02,587 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:49:10,522 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:49:10,526 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:49:10,529 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:51:29,556 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:51:29,561 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:51:29,563 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:52:01,862 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:52:01,866 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:52:01,867 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:52:22,619 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:52:22,623 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:52:22,625 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:52:32,021 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:52:32,025 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:52:32,027 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:53:01,059 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:53:01,063 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:53:01,065 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:53:20,048 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:53:20,052 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:53:20,054 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:57:10,085 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:57:10,090 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:57:10,091 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:57:25,433 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:57:25,438 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:57:25,440 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 12:59:25,980 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 12:59:25,984 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 12:59:25,986 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:01:05,434 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:01:05,437 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:01:05,439 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:04:49,984 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:04:49,990 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:04:49,992 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:04:52,593 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:04:52,598 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:04:52,601 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:04:58,650 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:04:58,654 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:04:58,656 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:05:05,934 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:05:05,938 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:05:05,941 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:06:11,014 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:06:11,019 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:06:11,020 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:06:15,833 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:06:15,836 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:06:15,838 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources
+2023-02-19 13:06:20,146 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-02-19 13:06:20,150 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-02-19 13:06:20,152 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nate\Capstone\Capstone\do-connect-capstone-project\src\test\resources

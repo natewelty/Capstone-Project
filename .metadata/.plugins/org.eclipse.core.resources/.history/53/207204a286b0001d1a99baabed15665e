@@ -1,0 +1,17 @@
+package com.cogent.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class ResourceController {
+//	@Autowired
+//	UserService userService; //This won't be the JdbcUserDetailsManager, we'll wrap that inside this UserService. Or use a UserRepository, still investigating.
+//	@Autowired
+//	QuestionService questionService;
+//	@Autowired
+//	AnswerService answerService;
+//	@AutowiredChatService chatService;
+	
+// This will end up being 16-20 request mappings minimum. I'm not going to organize it now, but we want to be careful
+// to keep them in an order that makes sense.
+	
+}

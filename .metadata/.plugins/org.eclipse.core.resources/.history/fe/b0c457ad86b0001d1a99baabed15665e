@@ -1,0 +1,18 @@
+package com.cogent.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cogent.service.AnswerService;
+import com.cogent.service.ChatService;
+import com.cogent.service.QuestionService;
+import com.cogent.service.UserService;
+@RestController
+public class ChatController {
+
+	
+	@Autowired
+	ChatService chatService;
+	
+	
+}

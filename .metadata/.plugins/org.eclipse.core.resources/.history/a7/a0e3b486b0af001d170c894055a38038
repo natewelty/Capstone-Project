@@ -1,0 +1,42 @@
+package com.cogent.service;
+
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+import com.cogent.entity.CustomUser;
+import com.cogent.entity.UserCreateRequest;
+import com.cogent.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class UserService {
+	@Autowired
+	private final UserRepository userRepository;
+	@Autowired
+	private final BCryptPasswordEncoder passwordEncoder;
+	
+	public CustomUser readUserByUsername(String username) {
+		return userRepository.findByUserName(username).orElseThrow(EntityNotFoundException::new);
+	}
+	
+	public void createUser(UserCreateRequest userCreateRequest) {
+		CustomUser user = new CustomUser();
+		Optional<CustomUser> byUsername = userRepository.findByUserName(userCreateRequest.getUsername());
+		if(byUsername.isPresent()) {
+			throw new RuntimeException("User is already registered.");
+		}
+		user.setUserName(userCreateRequest.getUsername());
+		user.setPassword(passwordEncoder.encode(userCreateRequest.getPassword()));
+		userRepository.save(user);
+	}
+	
+	public List<CustomUser> readAll(){
+		return userRepository.findAll();
+	}
+}

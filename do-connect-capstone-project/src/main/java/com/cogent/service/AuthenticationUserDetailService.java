@@ -1,6 +1,6 @@
 package com.cogent.service;
 
-import com.cogent.entity.User;
+import com.cogent.entity.CustomUser;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,10 +18,10 @@ public class AuthenticationUserDetailService implements UserDetailsService {
     private final UserService userService;
 
     @Override public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userService.readUserByUsername(username);
+        CustomUser user = userService.readUserByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException(username);
         }
-        return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(), Collections.emptyList());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.emptyList());
     }
 }

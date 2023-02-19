@@ -1,41 +1,42 @@
 package com.cogent.filter;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.cogent.config.AuthenticationConfigConstants;
-import com.cogent.entity.User;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.cogent.config.AuthenticationConfigConstants;
+import com.cogent.entity.CustomUser;
+import com.cogent.entity.UserAuthenticationRequest;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
-public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
-	//@Autowired
-    //private AuthenticationManager authenticationManager;
-
-    @Override 
-    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
+@AllArgsConstructor
+@Getter
+@Setter
+public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
+	private AuthenticationManager authenticationManager;
+	@Override
+	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
-            User creds = new ObjectMapper()
-                .readValue(request.getInputStream(), User.class);
+            UserAuthenticationRequest creds = new ObjectMapper()
+                .readValue(request.getInputStream(), UserAuthenticationRequest.class);
 
-            return getAuthenticationManager().authenticate(
+            return authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                     creds.getUserName(),
                     creds.getPassword(),
@@ -45,12 +46,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             throw new RuntimeException(e);
         }
     }
-    @Override 
-    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) throws IOException, ServletException {
-        String token = JWT.create()
-            .withSubject(((User) auth.getPrincipal()).getUserName())
-            .withExpiresAt(new Date(System.currentTimeMillis() + AuthenticationConfigConstants.EXPIRATION_TIME))
-            .sign(Algorithm.HMAC512(AuthenticationConfigConstants.SECRET.getBytes()));
+
+    @Override protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) throws IOException, ServletException {
+    	String token = JWT.create()
+                .withSubject(((CustomUser) auth.getPrincipal()).getUsername())
+                .withClaim("role", auth.getAuthorities().iterator().next().getAuthority())
+                .withExpiresAt(new Date(System.currentTimeMillis() + AuthenticationConfigConstants.EXPIRATION_TIME))
+                .sign(Algorithm.HMAC512(AuthenticationConfigConstants.SECRET.getBytes()));
         response.addHeader(AuthenticationConfigConstants.HEADER_STRING, AuthenticationConfigConstants.TOKEN_PREFIX + token);
     }
 }

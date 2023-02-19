@@ -4,8 +4,8 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cogent.entity.User;
+import com.cogent.entity.CustomUser;
 
-public interface UserRepository extends JpaRepository<User,Integer> {
-    Optional<User> findByUserName(String username);
+public interface UserRepository extends JpaRepository<CustomUser,Integer> {
+    Optional<CustomUser> findByUsername(String username);
 }
