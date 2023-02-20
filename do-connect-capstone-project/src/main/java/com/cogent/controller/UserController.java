@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -48,9 +49,9 @@ public class UserController {
 		return list;
 	}
 	
-	@GetMapping("/getuserbyid")
-	public CustomUser getUserById(@RequestBody UserRequest user) {
-		CustomUser custUser = userService.read(user.getId());
+	@GetMapping("/getuserbyid/{id}")
+	public CustomUser getUserById(@PathVariable("id") int id) {
+		CustomUser custUser = userService.read(id);
 		custUser.setPassword(null);
 		return custUser;
 	}
@@ -61,16 +62,16 @@ public class UserController {
 		userService.save(custUser);
 	}
 	
-	@GetMapping("/getuserbyname")
-	public CustomUser getUserByName(@RequestBody UserRequest user) {
-		CustomUser custUser = userService.readUserByName(user.getName());
+	@GetMapping("/getuserbyname/{name}")
+	public CustomUser getUserByName(@PathVariable("name") String name) {
+		CustomUser custUser = userService.readUserByName(name);
 		custUser.setPassword(null);
 		return custUser;
 	}
 	
-	@GetMapping("/getuserbyrole")
-	public List<CustomUser> getUsersByRole(@RequestBody UserRequest user){
-		SimpleGrantedAuthority sga =(SimpleGrantedAuthority) user.getAuthorities().toArray()[0];
+	@GetMapping("/getuserbyrole/{role}")
+	public List<CustomUser> getUsersByRole(@PathVariable("role") String role){
+		SimpleGrantedAuthority sga = new SimpleGrantedAuthority(role);
 		List<CustomUser> list = userService.readUsersByRole(sga.getAuthority().toString());
 		list.stream().forEach(s->s.setPassword(null));
 		return list;
