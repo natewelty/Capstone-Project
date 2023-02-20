@@ -1,0 +1,30 @@
+package com.cogent.controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cogent.config.AuthenticationConfigConstants;
+import com.cogent.entity.CustomUser;
+import com.cogent.entity.UserCreateRequest;
+import com.cogent.service.UserService;
+
+@RestController
+public class UserController {
+	@Autowired
+	UserService userService;
+	@PostMapping(AuthenticationConfigConstants.SIGN_UP_URL)
+    public String createUser(@RequestBody UserCreateRequest user) {
+    	Optional<CustomUser> dbCheck = userService.readUserByUsername(user.getUsername());
+    	if(dbCheck.isPresent()) {
+    		return "That user already exists you big dummy";
+    	}
+    	else {
+    		userService.save(new CustomUser(user.getUsername(),user.getPassword(),Arrays.asList(new SimpleGrantedAuthority(user.getRole()))));
+    	}
+    	return "User created.";
+    }
+}

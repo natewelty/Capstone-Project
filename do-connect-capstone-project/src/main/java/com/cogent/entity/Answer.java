@@ -1,5 +1,7 @@
 package com.cogent.entity;
 
+import java.time.OffsetDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,7 +18,7 @@ private int id;
 private String description_answer;
 private String img_src;
 private String status;
-private String datetime;
+private OffsetDateTime datetime;
 @ManyToOne
 private Question question;
 // @OneToOne

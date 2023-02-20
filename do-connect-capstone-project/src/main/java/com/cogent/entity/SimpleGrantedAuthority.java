@@ -1,4 +1,4 @@
-package com.cogent.entity;
+ package com.cogent.entity;
 
 import java.util.Collection;
 
@@ -12,9 +12,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 @Entity
 @Data
+@NoArgsConstructor
 public class SimpleGrantedAuthority implements GrantedAuthority{
 	/**
 	 * 
@@ -24,9 +27,7 @@ public class SimpleGrantedAuthority implements GrantedAuthority{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
 	String authority;
-	@ManyToMany(fetch=FetchType.EAGER,cascade = CascadeType.ALL)
-	@JoinColumn(name="id")
-	Collection<CustomUser> users;
+	
 	@Override
 	public String getAuthority() {
 		// TODO Auto-generated method stub

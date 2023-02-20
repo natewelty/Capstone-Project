@@ -1,6 +1,6 @@
 package com.cogent.entity;
 
-import java.sql.Date;
+import java.time.OffsetDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,5 +17,5 @@ public class Chat {
 	private String from_user;
 	private String to_user;
 	private String message;
-	private Date datetime;
+	private OffsetDateTime datetime;
 }

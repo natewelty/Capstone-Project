@@ -1,5 +1,6 @@
 package com.cogent.entity;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -19,7 +20,7 @@ public class Question {
 private int id;
 private String description_question;
 private String image_src;
-private String datetime;
+private OffsetDateTime datetime;
 private String status;
 private String topic;
 private String title;
