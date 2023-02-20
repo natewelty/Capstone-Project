@@ -1,0 +1,26 @@
+package com.cogent;
+
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.cogent.entity.CustomUser;
+import com.cogent.repository.UserRepository;
+
+import jakarta.annotation.PostConstruct;
+
+@SpringBootApplication
+public class DoConnectCapstoneProjectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DoConnectCapstoneProjectApplication.class, args);
+	}
+
+}

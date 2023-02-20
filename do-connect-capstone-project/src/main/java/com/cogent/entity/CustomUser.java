@@ -25,7 +25,6 @@ public class CustomUser{   //User class itself from security.core doesn't have a
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;

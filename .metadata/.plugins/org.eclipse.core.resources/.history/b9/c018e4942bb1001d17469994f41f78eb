@@ -1,0 +1,30 @@
+package com.cogent.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cogent.config.AuthenticationConfigConstants;
+import com.cogent.entity.UserCreateRequest;
+import com.cogent.service.UserService;
+
+@RestController
+public class UserController {
+	@Autowired
+	UserService userService;
+	@PostMapping(AuthenticationConfigConstants.SIGN_UP_URL)
+    public String createUser(@RequestBody UserCreateRequest user) {
+    	
+    	userService.createUser(user);
+    	
+    	return "User created.";
+    }
+	
+	@PutMapping("/login")
+	public String login() {
+		return "This is a test login page.";
+	}
+}

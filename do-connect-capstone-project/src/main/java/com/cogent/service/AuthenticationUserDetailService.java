@@ -2,7 +2,6 @@ package com.cogent.service;
 
 
 
-import java.util.Optional;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
