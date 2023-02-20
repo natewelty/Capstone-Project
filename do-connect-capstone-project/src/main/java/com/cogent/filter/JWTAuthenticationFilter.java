@@ -16,7 +16,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.cogent.config.AuthenticationConfigConstants;
 import com.cogent.entity.CustomUser;
-import com.cogent.entity.UserAuthenticationRequest;
+import com.cogent.requests.UserAuthenticationRequest;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -39,7 +39,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
             return authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                    creds.getUserName(),
+                    creds.getUsername(),
                     creds.getPassword(),
                     new ArrayList<>())
             );

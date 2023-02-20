@@ -17,8 +17,9 @@ public class Answer {
 private int id;
 private String description_answer;
 private String img_src;
-private String status;
+private boolean status;
 private OffsetDateTime datetime;
+
 @ManyToOne
 private Question question;
 // @OneToOne

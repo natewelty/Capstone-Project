@@ -1,0 +1,12 @@
+package com.cogent.entity;
+
+import java.util.Collection;
+
+public class UserRequest {
+	private int id;
+	private String username;
+	private String password;
+	private String name;
+	private String email;
+	Collection<SimpleGrantedAuthority> authorities;
+}

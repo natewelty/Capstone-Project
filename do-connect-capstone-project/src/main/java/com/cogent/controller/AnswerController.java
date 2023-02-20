@@ -8,4 +8,6 @@ import com.cogent.service.AnswerService;
 public class AnswerController {
 	@Autowired
 	AnswerService answerService;
+	
+	
 }
