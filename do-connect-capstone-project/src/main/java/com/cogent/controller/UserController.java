@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cogent.config.AuthenticationConfigConstants;
 import com.cogent.entity.CustomUser;
+import com.cogent.entity.SimpleGrantedAuthority;
 import com.cogent.requests.UserCreateRequest;
+import com.cogent.requests.UserRequest;
 import com.cogent.service.UserService;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -41,27 +43,37 @@ public class UserController {
 	
 	@GetMapping("/getallusers")
 	public List<CustomUser> getAllUsers(){
-		return userService.readAll();
+		List<CustomUser> list = userService.readAll();
+		list.stream().forEach(s->s.setPassword(null));
+		return list;
 	}
 	
 	@GetMapping("/getuserbyid")
-	public CustomUser getUserById(@RequestBody int id) {
-		return userService.read(id);
+	public CustomUser getUserById(@RequestBody UserRequest user) {
+		CustomUser custUser = userService.read(user.getId());
+		custUser.setPassword(null);
+		return custUser;
 	}
 	
 	@PutMapping("/updateuser")
-	public void updateUser(@RequestBody CustomUser user) {
-		userService.save(user);
+	public void updateUser(@RequestBody UserRequest user) {
+		CustomUser custUser= new CustomUser(user);
+		userService.save(custUser);
 	}
 	
 	@GetMapping("/getuserbyname")
-	public CustomUser getUserByName(@RequestBody String name) {
-		return userService.readUserByName(user.getName());
+	public CustomUser getUserByName(@RequestBody UserRequest user) {
+		CustomUser custUser = userService.readUserByName(user.getName());
+		custUser.setPassword(null);
+		return custUser;
 	}
 	
 	@GetMapping("/getuserbyrole")
-	public List<CustomUser> getUsersByRole(String role){
-		return userService.readUsersByRole(role);
+	public List<CustomUser> getUsersByRole(@RequestBody UserRequest user){
+		SimpleGrantedAuthority sga =(SimpleGrantedAuthority) user.getAuthorities().toArray()[0];
+		List<CustomUser> list = userService.readUsersByRole(sga.getAuthority().toString());
+		list.stream().forEach(s->s.setPassword(null));
+		return list;
 	}
 	
 

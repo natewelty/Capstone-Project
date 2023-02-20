@@ -1,0 +1,15 @@
+package com.cogent.service;
+
+import org.springframework.stereotype.Service;
+
+import com.cogent.repository.ChatRepository;
+
+@Service
+public class ChatService {
+	ChatRepository repository;
+	public List<Chat> findChatHistory(userA, userB){
+		List<Chat> list1 = repository.findChats(FromUserA).
+				stream().filter(s->s.getToUser(UserB)).toList();
+		
+	}
+}

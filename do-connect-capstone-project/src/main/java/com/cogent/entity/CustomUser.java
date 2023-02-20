@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import org.springframework.security.core.userdetails.User;
 
+import com.cogent.requests.UserRequest;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -48,6 +50,11 @@ public class CustomUser{   //User class itself from security.core doesn't have a
 		this.name=name;
 		this.email=email;
 		
+	}
+	public CustomUser(UserRequest user) {
+		this(user.getName(),user.getPassword(),user.getAuthorities());
+		this.name=user.getName();
+		this.email=user.getEmail();
 	}
 	
 	

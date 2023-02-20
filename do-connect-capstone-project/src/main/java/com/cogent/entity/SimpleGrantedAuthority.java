@@ -30,5 +30,21 @@ public class SimpleGrantedAuthority implements GrantedAuthority{
 	public SimpleGrantedAuthority(String role) {
 		this.authority=role;
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		SimpleGrantedAuthority otherSGA=(SimpleGrantedAuthority) other;
+		if(this.getAuthority().equals(otherSGA.getAuthority())) {
+			return true;
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		int result = 17;
+		result = 31*result+id;
+		result = 31*result+authority.hashCode();
+		return result;
+	}
 
 }

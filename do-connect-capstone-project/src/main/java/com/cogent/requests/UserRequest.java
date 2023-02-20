@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import com.cogent.entity.SimpleGrantedAuthority;
 
+import lombok.Data;
+@Data
 public class UserRequest {
 	private int id;
 	private String username;
