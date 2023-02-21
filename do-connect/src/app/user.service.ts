@@ -17,12 +17,19 @@ export class UserService {
   signup(user:UserCreateRequest):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}/adduser`,user);
   }
-
   login(user:UserAuthenticationRequest):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}/login`,user);
   }
-  
-  getUserById(user:UserRequest):Observable<User>{
-    return this.httpClient.get<User>(`${this.baseURL}/getuserbyid`,user)
+  getAllUsers():Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.baseURL}/getallusers`);
+  }
+  getUserById(id:number):Observable<User>{
+    return this.httpClient.get<User>(`${this.baseURL}/getuserbyid/${id}`);
+  }
+  updateUser(user:UserRequest):Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/updateuser`,user);
+  }
+  getUsersByRole(role:string):Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.baseURL}/getuserbyrole/${role}`);
   }
 }

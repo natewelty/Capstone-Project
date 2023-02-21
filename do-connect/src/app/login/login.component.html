@@ -1,0 +1,21 @@
+
+<div>
+    <h3> Login </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Username</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "loginInfo.username" name = "username">
+        </div>
+    
+        <div class="form-group">
+            <label> Password</label>
+            <input type="password" class ="form-control" id = "password"
+                [(ngModel)] = "loginInfo.password" name = "password">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
