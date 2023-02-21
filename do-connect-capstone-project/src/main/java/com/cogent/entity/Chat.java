@@ -2,6 +2,8 @@ package com.cogent.entity;
 
 import java.time.OffsetDateTime;
 
+import com.cogent.requests.ChatRequest;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,4 +20,14 @@ public class Chat{
 	private String to_user;
 	private String message;
 	private OffsetDateTime datetime;
+	
+	public Chat(ChatRequest chatRequest) {
+		
+		this.from_user = chatRequest.getFrom_user();
+		this.to_user = chatRequest.getTo_user();
+		this.message = chatRequest.getMessage();
+		this.datetime = OffsetDateTime.now();
+	}
+	
+	
 }
