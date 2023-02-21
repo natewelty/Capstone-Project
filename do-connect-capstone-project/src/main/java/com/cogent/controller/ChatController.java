@@ -22,6 +22,7 @@ public class ChatController {
 	ChatService chatService;
 	
 	
+
 	@PostMapping("/Chat/addmsg")
 	public void Addmsg(@RequestBody ChatRequest chatRequest) {
 		Chat chat = new Chat(chatRequest);
@@ -44,6 +45,7 @@ public class ChatController {
 	public List<Chat> getHistory(@PathVariable("name1") String name1,@PathVariable("name2") String name2 ){
 		return chatService.findChat(name1, name2);
 	}
+
 	
 	
 	
