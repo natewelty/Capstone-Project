@@ -58,10 +58,10 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="916"/>
-		<item key="DIALOG_Y_ORIGIN" value="135"/>
+		<item key="DIALOG_X_ORIGIN" value="547"/>
+		<item key="DIALOG_Y_ORIGIN" value="6"/>
 		<item key="DIALOG_WIDTH" value="738"/>
-		<item key="DIALOG_HEIGHT" value="866"/>
+		<item key="DIALOG_HEIGHT" value="773"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|18.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|0|3|2|1|34|Segoe UI"/>
 	</section>
 	<section name="NewPackageWizardPage">
