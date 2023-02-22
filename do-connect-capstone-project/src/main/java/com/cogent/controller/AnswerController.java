@@ -16,51 +16,51 @@ import com.cogent.entity.Answer;
 import com.cogent.requests.AnswerRequest;
 import com.cogent.service.AnswerService;
 
-@RestController()
+@RestController("/answer")
 public class AnswerController {
 	@Autowired
 	AnswerService answerService;
 	
 
-	@PostMapping("/answers")
+	@PostMapping("/create")
 	public String writeAnswer(@RequestBody AnswerRequest ans) {
 		answerService.createAnswer(ans);
 		return "Answer added";
 	}
 
-	@GetMapping("/getallanswers")
+	@GetMapping("/read/all")
 	public List<Answer> getAllAnswer() {
 		List<Answer> list = answerService.readAll();
 		return list;
 
 	}
 
-	@GetMapping("/getanswerbyid/{id}")
+	@GetMapping("/read/id/{id}")
 	public Answer getAnswerById(@PathVariable("id") int id) {
 		Answer answer = answerService.readById(id);
 		return answer;
 
 	}
 
-	@PutMapping("/updateanswer")
+	@PutMapping("/update")
 	public Answer updateAnswer(@RequestBody Answer ans) {
 		return answerService.update(ans);
 	}
 
-	@GetMapping("/getunapprovedanswer")
+	@GetMapping("/read/unapproved")
 	public List<Answer> getUnapprovedAnswer() {
 		List<Answer> list = answerService.findbyStatus();
 		return list;
 	}
 
-	@DeleteMapping("/deleteanswer/{id}")
+	@DeleteMapping("/delete/{id}")
 	public String deleteById(@PathVariable("id") Integer id) {
 
 		return answerService.delete(id);
 
 	}
 
-	@GetMapping("/getbyquestionid/{id}")
+	@GetMapping("/read/id/{id}")
 	public List<Answer> findbyQid(@PathVariable("id") Integer id) {
 		List<Answer> list = answerService.findAnswerByQuestionId(id);
 		return list;

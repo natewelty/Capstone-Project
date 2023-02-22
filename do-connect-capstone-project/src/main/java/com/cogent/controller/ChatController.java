@@ -15,31 +15,31 @@ import com.cogent.entity.Chat;
 import com.cogent.requests.ChatRequest;
 import com.cogent.service.ChatService;
 
-@RestController
+@RestController("/chat")
 public class ChatController {
 
 	@Autowired
 	ChatService chatService;
 
-	@PostMapping("/chat/addmsg")
+	@PostMapping("/create")
 	public void Addmsg(@RequestBody ChatRequest chatRequest) {
 		Chat chat = new Chat(chatRequest);
 		chatService.saveMsg(chat);
 	}
 
-	@DeleteMapping("/chat/deletechatbyid/{id}")
+	@DeleteMapping("/delete/{id}")
 	public void deleteChatbyid(@PathVariable("id") int id) {
 
 		chatService.deleteUseId(id);
 
 	}
 
-	@GetMapping("/chat/getallmsg")
+	@GetMapping("/read/all")
 	public List<Chat> getallmsg_left() {
 		return chatService.showAll();
 	}
 
-	@GetMapping("/chat/gethistory/{name1}/{name2}")
+	@GetMapping("/read/history/{name1}/{name2}")
 	public List<Chat> getHistory(@PathVariable("name1") String name1, @PathVariable("name2") String name2) {
 		return chatService.findChat(name1, name2);
 	}

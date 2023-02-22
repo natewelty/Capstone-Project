@@ -15,45 +15,45 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cogent.entity.Question;
 import com.cogent.requests.QuestionRequest;
 import com.cogent.service.QuestionService;
-@RestController
+@RestController("/question")
 public class QuestionController {
 	@Autowired
 	QuestionService questionService;
 	
-	@PostMapping("/addquestions")
+	@PostMapping("/create")
 	public String addQuestion(@RequestBody QuestionRequest questionRequest ) {
 		questionService.createQuestion(new Question(questionRequest));
 		return "Question asked";
 		
 	}
-	@GetMapping("/getallquestion")
+	@GetMapping("/read/all")
 	public List<Question> getAllQuestion(){
 		List<Question> list = questionService.getAll();
 		return list;
 		
 	}
-	@GetMapping("/getquestionbyid/{id}")
+	@GetMapping("/read/id/{id}")
 	public Question getQuestionById(@PathVariable("id") Integer id) {
 		Question quiz = questionService.getById(id);
 		return quiz;
 	}
-	@PutMapping("/updatequestion")
+	@PutMapping("/update")
 	public Question updateQuestion(@RequestBody Question question){
 		return questionService.update(question);
 	}
-	@DeleteMapping("/deletebyid/{id}")
+	@DeleteMapping("/delete/{id}")
 	public String deleteById(@PathVariable("id") int id){
 		
 		return questionService.deleteById(id);
 		
 	}
-	@GetMapping("/getquestionfalse")
+	@GetMapping("/read/unapproved")
 	public List<Question>getFalseQuestion(){
 		List<Question>list = questionService.getAllQuestionFalse();
 		return list;
 		
 	}
-	@GetMapping("/getquestionbytopic/{topic}")
+	@GetMapping("/read/topic/{topic}")
 	public List<Question>findByTopic(@PathVariable("topic")String topic){
 		List<Question>list = questionService.getAllQuestionByTopic(topic);
 		return list;
