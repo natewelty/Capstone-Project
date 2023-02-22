@@ -29,7 +29,7 @@ public class UserController {
 		return "this is home";
 	}
 
-	@PostMapping(AuthenticationConfigConstants.SIGN_UP_URL)
+	@PostMapping("/user/adduser")
 	public String createUser(@RequestBody UserCreateRequest user) {
 
 		userService.createUser(user);

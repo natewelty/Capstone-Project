@@ -28,31 +28,34 @@ public class WebSecurityConfig {
 	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager auth) throws Exception {
-	    http.csrf()
-	      .disable()
-	      .cors()
-	      .and()
-	      .authorizeHttpRequests()
-	      .requestMatchers("/css/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico")
-	      .permitAll()
-	      .requestMatchers(HttpMethod.POST, AuthenticationConfigConstants.SIGN_UP_URL)
-	      .permitAll()
-	      .requestMatchers("/admin/**")
-	      .hasRole("ADMIN")
-	      .requestMatchers("/user/**")
-	      .hasAnyRole("USER", "ADMIN")
-	      .requestMatchers("/user/login/**")
-	      .anonymous()
-	      .anyRequest()
-	      .authenticated()
-	      .and()
-	      .addFilter(new JWTAuthenticationFilter(auth))
-	      .addFilter(new JWTAuthorizationFilter(auth))
-	      .sessionManagement()
-	      .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		
-		
-		
+//		    http.csrf()
+//		      .disable()
+//		      .cors()
+//		      .and()
+//		      .authorizeHttpRequests()
+//		      .requestMatchers("/css/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico")
+//		      .permitAll()
+//		      .requestMatchers(HttpMethod.POST, AuthenticationConfigConstants.SIGN_UP_URL)
+//		      .permitAll()
+//		      .requestMatchers("/admin/**")
+//		      .hasRole("ADMIN")
+//		      .requestMatchers("/user/**")
+//		      .hasAnyRole("USER", "ADMIN")
+//		      .requestMatchers("/user/login/**")
+//		      .anonymous()
+//		      .anyRequest()
+//		      .authenticated()
+//		      .and()
+//		      .addFilter(new JWTAuthenticationFilter(auth))
+//		      .addFilter(new JWTAuthorizationFilter(auth))
+//		      .sessionManagement()
+//		      .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+			
+			http.csrf().disable().cors().and().authorizeHttpRequests().anyRequest().permitAll()
+			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+			
+
+		   
 
 	    return http.build();
 	}
