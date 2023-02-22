@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@GetMapping("/")
+	@GetMapping("/user")
 	public String home() {
 		return "this is home";
 	}
@@ -37,39 +37,39 @@ public class UserController {
 		return "User created.";
 	}
 
-	@PostMapping("/login")
+	@PostMapping("/user/login")
 	public String login() {
 		return "This is a test login page.";
 	}
 	
-	@GetMapping("/getallusers")
+	@GetMapping("/user/read/all")
 	public List<CustomUser> getAllUsers(){
 		List<CustomUser> list = userService.readAll();
 		list.stream().forEach(s->s.setPassword(null));
 		return list;
 	}
 	
-	@GetMapping("/getuserbyid/{id}")
+	@GetMapping("/user/read/id/{id}")
 	public CustomUser getUserById(@PathVariable("id") int id) {
 		CustomUser custUser = userService.read(id);
 		custUser.setPassword(null);
 		return custUser;
 	}
 	
-	@PutMapping("/updateuser")
+	@PutMapping("/update")
 	public void updateUser(@RequestBody UserRequest user) {
 		CustomUser custUser= new CustomUser(user);
 		userService.save(custUser);
 	}
 	
-	@GetMapping("/getuserbyname/{name}")
+	@GetMapping("/user/read/name/{name}")
 	public CustomUser getUserByName(@PathVariable("name") String name) {
 		CustomUser custUser = userService.readUserByName(name);
 		custUser.setPassword(null);
 		return custUser;
 	}
 	
-	@GetMapping("/getuserbyrole/{role}")
+	@GetMapping("/user/read/role/{role}")
 	public List<CustomUser> getUsersByRole(@PathVariable("role") String role){
 		SimpleGrantedAuthority sga = new SimpleGrantedAuthority(role);
 		List<CustomUser> list = userService.readUsersByRole(sga.getAuthority().toString());

@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Primary"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.cogent.service.UserService"/>
     <fullyQualifiedTypeName name="com.cogent.service.QuestionService"/>
     <fullyQualifiedTypeName name="com.cogent.service.ChatService"/>
@@ -30,10 +29,7 @@
     <fullyQualifiedTypeName name="com.cogent.entity.Question"/>
     <fullyQualifiedTypeName name="com.cogent.entity.Chat"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="com.cogent.entity.Answer"/>
-    <fullyQualifiedTypeName name="java.time.OffsetDateTime"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="com.cogent.config.AuthenticationConfigConstants"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
@@ -44,13 +40,22 @@
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="com.cogent.requests.UserRequest"/>
     <fullyQualifiedTypeName name="com.cogent.entity.CustomUser"/>
     <fullyQualifiedTypeName name="com.cogent.repository.ChatRepository"/>
     <fullyQualifiedTypeName name="com.cogent.entity.SimpleGrantedAuthority"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.cogent.repository.AnswerRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.cogent.entity.Answer"/>
+    <fullyQualifiedTypeName name="java.time.OffsetDateTime"/>
+    <fullyQualifiedTypeName name="com.cogent.request.AnswerRequest"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.cogent.requests.QuestionRequest"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.CascadeType"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
 </qualifiedTypeNameHistroy>
