@@ -35,8 +35,6 @@ public class WebSecurityConfig {
 	      .permitAll()
 	      .requestMatchers(HttpMethod.POST, AuthenticationConfigConstants.SIGN_UP_URL)
 	      .permitAll()
-	      .requestMatchers(HttpMethod.DELETE)
-	      .hasRole("ADMIN")
 	      .requestMatchers("/admin/**")
 	      .hasRole("ADMIN")
 	      .requestMatchers("/user/**")
