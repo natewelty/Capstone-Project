@@ -1,0 +1,5 @@
+package com.cogent.requests;
+
+public class QuestionRequest {
+
+}

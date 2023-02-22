@@ -14,37 +14,34 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cogent.entity.Chat;
 import com.cogent.requests.ChatRequest;
 import com.cogent.service.ChatService;
-@RestController
+
+@RestController("/chat")
 public class ChatController {
 
-	
 	@Autowired
 	ChatService chatService;
-	
-	
-	@PostMapping("/Chat/addmsg")
+
+	@PostMapping("/create")
 	public void Addmsg(@RequestBody ChatRequest chatRequest) {
 		Chat chat = new Chat(chatRequest);
 		chatService.saveMsg(chat);
 	}
-	
-	@DeleteMapping("/Chat/DeleteChatById/{id}")
+
+	@DeleteMapping("/delete/{id}")
 	public void deleteChatbyid(@PathVariable("id") int id) {
-		
+
 		chatService.deleteUseId(id);
-		
+
 	}
-	@GetMapping("/Chat/getallmsg")
+
+	@GetMapping("/read/all")
 	public List<Chat> getallmsg_left() {
 		return chatService.showAll();
 	}
-	
-	
-	@GetMapping("/Chat/getHistory/{name1}/{name2}")
-	public List<Chat> getHistory(@PathVariable("name1") String name1,@PathVariable("name2") String name2 ){
+
+	@GetMapping("/read/history/{name1}/{name2}")
+	public List<Chat> getHistory(@PathVariable("name1") String name1, @PathVariable("name2") String name2) {
 		return chatService.findChat(name1, name2);
 	}
-	
-	
-	
+
 }

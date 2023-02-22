@@ -13,23 +13,25 @@ import com.cogent.repository.QuestionRepository;
 public class QuestionService {
 	@Autowired
 	private QuestionRepository questionRepo;
-	public void createQuestion() {
-		
+	
+	
+	public void createQuestion(Question question) {
+		questionRepo.save(question);
 		
 	}
 	public List<Question> getAll(){
 		return questionRepo.findAll();
 	}
 	public Question getById(int id) {
-		return questionRepo.getById(id);
+		return questionRepo.findById(id).orElseThrow();
 	}
 	public Question update(Question question) {
 		return questionRepo.save(question);
 	}
 	
-	public Question deletById(Integer id) {
+	public String deleteById(int id) {
 		questionRepo.deleteById(id);
-		return null;
+		return "question deleted";
 	}
 	public List<Question> getAllQuestionFalse() {
 		return questionRepo.findByStatus(false);
@@ -38,10 +40,11 @@ public class QuestionService {
 	
 	public List<Question> getAllQuestionByTopic(String topic) {
 		List<Question>list = questionRepo.findAll();
-		return list.stream().filter(s->s.getTopic()==topic).toList();
+		return list.stream().filter(s->s.getTopic().compareToIgnoreCase(topic)==0).toList();
 	}
 	
 
+	
 }
 
 

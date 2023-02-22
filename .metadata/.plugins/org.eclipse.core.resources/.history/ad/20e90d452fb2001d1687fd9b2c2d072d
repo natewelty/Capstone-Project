@@ -1,0 +1,38 @@
+package com.cogent.request;
+
+import java.time.OffsetDateTime;
+
+import com.cogent.entity.Answer;
+import com.cogent.entity.Question;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.Data;
+
+@Data
+public class AnswerRequest {
+
+	public String description_answer;
+	public String img_src;
+
+	public Question question;
+
+	// @OneToOne
+	public String created_by;
+
+	public AnswerRequest() {
+		super();
+	}
+
+	public AnswerRequest(String description_answer, String img_src, Question question, String created_by) {
+		super();
+		this.description_answer = description_answer;
+		this.img_src = img_src;
+		this.question = question;
+		this.created_by = created_by;
+	}
+	
+
+}

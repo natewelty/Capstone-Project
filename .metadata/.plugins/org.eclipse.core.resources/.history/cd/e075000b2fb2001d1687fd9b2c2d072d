@@ -1,0 +1,19 @@
+package com.cogent.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cogent.entity.Answer;
+import com.cogent.repository.AnswerRepository;
+
+@Service
+public class AnswerService {
+	@Autowired
+	AnswerRepository ansRepo;
+	public List<Answer> findAnswersByQuestionId(int id){
+		List<Answer> list = ansRepo.findAll();
+		return list.stream().filter(s->s.getQuestion().getId()==id).toList();
+	}
+}
