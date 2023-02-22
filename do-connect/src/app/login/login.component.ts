@@ -28,4 +28,9 @@ export class LoginComponent {
     console.log(this.loginInfo);
     this.attemptLogin();
   }
+
+  onClick(){
+    console.log("click");
+    console.log(this.userService.getAllUsers());
+  }  
 }

@@ -30,6 +30,8 @@ public class WebSecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager auth) throws Exception {
 	    http.csrf()
 	      .disable()
+	      .cors()
+	      .and()
 	      .authorizeHttpRequests()
 	      .requestMatchers("/css/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico")
 	      .permitAll()
@@ -39,7 +41,7 @@ public class WebSecurityConfig {
 	      .hasRole("ADMIN")
 	      .requestMatchers("/user/**")
 	      .hasAnyRole("USER", "ADMIN")
-	      .requestMatchers("/login/**")
+	      .requestMatchers("/user/login/**")
 	      .anonymous()
 	      .anyRequest()
 	      .authenticated()

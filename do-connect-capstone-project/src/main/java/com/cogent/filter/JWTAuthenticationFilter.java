@@ -26,7 +26,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
+
 @Getter
 @Setter
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
@@ -56,4 +56,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .sign(Algorithm.HMAC512(AuthenticationConfigConstants.SECRET.getBytes()));
         response.addHeader(AuthenticationConfigConstants.HEADER_STRING, AuthenticationConfigConstants.TOKEN_PREFIX + token);
     }
+
+	public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+		super();
+		this.setFilterProcessesUrl("/user/login");
+		this.authenticationManager = authenticationManager;
+	}
+    
 }
