@@ -1,6 +1,7 @@
 package com.cogent.service;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -33,9 +34,10 @@ public class UserService {
 	
 	public void createUser(UserCreateRequest userCreateRequest) {
 		SimpleGrantedAuthority role = new SimpleGrantedAuthority(userCreateRequest.getRole());
+		
 		CustomUser user = new CustomUser(userCreateRequest.getUsername(),
 					passwordEncoder.encode(userCreateRequest.getPassword()),
-					userCreateRequest.getName(),userCreateRequest.getEmail(),Arrays.asList(role));
+					userCreateRequest.getName(),userCreateRequest.getEmail(), role);
 		Optional<CustomUser> byUsername = userRepository.findByUsername(userCreateRequest.getUsername());
 		if(byUsername.isPresent()) {
 			throw new RuntimeException("User is already registered.");
@@ -56,6 +58,6 @@ public class UserService {
 	}
 	
 	public List<CustomUser> readUsersByRole(String role){
-		return userRepository.findAll().stream().filter(u->u.getAuthorities().contains(new SimpleGrantedAuthority(role))).toList();
+		return userRepository.findAll().stream().filter(u->u.getAuthorities().equals(new SimpleGrantedAuthority(role))).toList();
 	}
 }
