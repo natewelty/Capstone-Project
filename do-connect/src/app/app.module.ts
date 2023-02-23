@@ -13,7 +13,7 @@ import { SearchquestionComponent } from './searchquestion/searchquestion.compone
 import { DisplayquestionComponent } from './displayquestion/displayquestion.component';
 import { CreateanswerComponent } from './createanswer/createanswer.component';
 import { PendinganswerComponent } from './pendinganswer/pendinganswer.component';
-import { PendingquestionComponent } from './pendingquestion/pendingquestion.component';
+
 import { ChatdashboardComponent } from './chatdashboard/chatdashboard.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 
@@ -32,7 +32,7 @@ export function tokenGetter() {
     DisplayquestionComponent,
     CreateanswerComponent,
     PendinganswerComponent,
-    PendingquestionComponent,
+
     ChatdashboardComponent,
     ChatroomComponent
   ],

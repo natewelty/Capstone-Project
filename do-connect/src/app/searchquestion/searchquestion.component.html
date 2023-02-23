@@ -1,1 +1,21 @@
-<p>searchquestion works!</p>
+<div>
+   
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Question Id</label>
+            <input type="number" class ="form-control" id = "searchquestionid"
+                [(ngModel)] = "question.id" name = "id">
+        </div>
+    
+        <div class="form-group">
+            <label> title</label>
+            <input type="text" class ="form-control" id = "searchquestiontitle"
+                [(ngModel)] = "question.title" name = "password">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+        
+    </form>
+
+    </div>
