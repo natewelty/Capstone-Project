@@ -51,10 +51,6 @@ public class WebSecurityConfig {
 			
 //			http.csrf().disable().cors().and().authorizeHttpRequests().anyRequest().permitAll()
 //			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-			
-
-		   
-
 	    return http.build();
 	}
 	@Bean
