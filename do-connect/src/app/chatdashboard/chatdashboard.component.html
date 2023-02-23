@@ -1,1 +1,6 @@
-<p>chatdashboard works!</p>
+<form (ngSubmit)="onSubmit()">
+    <button class = "btn btn-success" type ="submit">Get All Users</button>
+</form>
+<li *ngFor="let user of tableData">
+     {{user.username}} {{user.name}} {{user.email}}
+</li>

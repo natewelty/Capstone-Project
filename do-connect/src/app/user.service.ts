@@ -5,6 +5,7 @@ import { UserCreateRequest } from './usercreaterequest';
 import { UserAuthenticationRequest } from './userauthenticationrequest';
 import { UserRequest } from './userrequest';
 import { User } from './user';
+import { Token } from './token';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class UserService {
   signup(user:UserCreateRequest):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}/adduser`,user);
   }
-  login(user:UserAuthenticationRequest):Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}/login`,user);
+  login(user:UserAuthenticationRequest):Observable<Token>{
+    return this.httpClient.post(`${this.baseURL}/login`,user) as Observable<Token>;
   }
   getAllUsers():Observable<User[]>{
     return this.httpClient.get<User[]>(`${this.baseURL}/read/all`);

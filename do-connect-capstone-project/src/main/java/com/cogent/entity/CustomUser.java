@@ -1,6 +1,8 @@
 package com.cogent.entity;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.userdetails.User;
 
@@ -35,17 +37,21 @@ public class CustomUser{   //User class itself from security.core doesn't have a
 	private String name;
 	private String email;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name = "id")
-	Collection<SimpleGrantedAuthority> authorities; //Same thing as User, GrantedAuthority plus a persistence ID
+	//@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	//@JoinColumn(name = "id")
+	SimpleGrantedAuthority authorities; //Same thing as User, GrantedAuthority plus a persistence ID
 	
-	public CustomUser(String username, String password, Collection<SimpleGrantedAuthority> authorities) {
+	public CustomUser(String username, String password, SimpleGrantedAuthority authorities) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.authorities = authorities;
+		this.authorities=authorities;
+		
+		
+		
+		
 	}
-	public CustomUser(String username, String password,String name,String email, Collection<SimpleGrantedAuthority> authorities) {
+	public CustomUser(String username, String password,String name,String email, SimpleGrantedAuthority authorities) {
 		this(username, password, authorities);
 		this.name=name;
 		this.email=email;
@@ -55,6 +61,7 @@ public class CustomUser{   //User class itself from security.core doesn't have a
 		this(user.getName(),user.getPassword(),user.getAuthorities());
 		this.name=user.getName();
 		this.email=user.getEmail();
+		
 	}
 	
 	

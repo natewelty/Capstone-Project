@@ -10,11 +10,13 @@ import { UserAuthenticationRequest } from '../userauthenticationrequest';
 })
 export class LoginComponent {
   loginInfo: UserAuthenticationRequest = new UserAuthenticationRequest("","");
+ 
   constructor(private userService:UserService, private router:Router){}
 
   attemptLogin(){
     this.userService.login(this.loginInfo).subscribe(data=>{
       console.log(data);
+      localStorage.setItem("access_token",data.token);
       this.goToHomePage();
     },
     error=>console.log(error))
@@ -29,8 +31,4 @@ export class LoginComponent {
     this.attemptLogin();
   }
 
-  onClick(){
-    console.log("click");
-    console.log(this.userService.getAllUsers());
-  }  
 }
