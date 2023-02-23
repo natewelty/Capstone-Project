@@ -16,6 +16,7 @@ import { PendinganswerComponent } from './pendinganswer/pendinganswer.component'
 import { PendingquestionComponent } from './pendingquestion/pendingquestion.component';
 import { ChatdashboardComponent } from './chatdashboard/chatdashboard.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -45,7 +46,8 @@ export function tokenGetter() {
         tokenGetter: tokenGetter,
         allowedDomains: ["localhost:8080"],
         disallowedRoutes: ["localhost:8080/user/login", "localhost:8080/user/adduser"],}}),
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
 
   ],
   providers: [],
