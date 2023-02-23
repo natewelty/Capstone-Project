@@ -3,10 +3,13 @@ package com.cogent.service;
 
 
 
+import java.util.Arrays;
+
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.cogent.entity.CustomUser;
@@ -25,7 +28,7 @@ public class AuthenticationUserDetailService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException(username);
         }
-        return  new User(user.getUsername(),user.getPassword(),user.getAuthorities());
+        return  new User(user.getUsername(),user.getPassword(),Arrays.asList(user.getAuthorities()));
     }
     
 }

@@ -1,22 +1,19 @@
-
 <div>
     <h3> Login </h3>
-    <form (ngSubmit) = "onSubmit()">
-    
+    <form (ngSubmit)="onSubmit()">
+
         <div class="form-group">
             <label> Username</label>
-            <input type="text" class ="form-control" id = "loginUsername"
-                [(ngModel)] = "loginInfo.username" name = "username">
+            <input type="text" class="form-control" id="loginUsername" [(ngModel)]="loginInfo.username" name="username">
         </div>
-    
+
         <div class="form-group">
             <label> Password</label>
-            <input type="password" class ="form-control" id = "loginPassword"
-                [(ngModel)] = "loginInfo.password" name = "password">
+            <input type="password" class="form-control" id="loginPassword" [(ngModel)]="loginInfo.password"
+                name="password">
         </div>
-    
-        <button class = "btn btn-success" type ="submit">Submit</button>
-        
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
     </form>
-    <button  class = "btn btn-success" type ="submit">Get Users</button>
-    </div> 
+</div>

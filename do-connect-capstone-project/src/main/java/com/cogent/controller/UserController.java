@@ -38,8 +38,8 @@ public class UserController {
 	}
 
 	@PostMapping("/user/login")
-	public String login() {
-		return "This is a test login page.";
+	public void login() {
+		System.out.println("Login attempted.");
 	}
 	
 	@GetMapping("/user/read/all")
