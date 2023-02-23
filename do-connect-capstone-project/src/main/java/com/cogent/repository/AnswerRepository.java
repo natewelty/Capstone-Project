@@ -1,9 +1,11 @@
 package com.cogent.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.cogent.entity.Answer;
 
-public interface AnswerRepository extends JpaRepository<Answer,Integer>{
 
+public interface AnswerRepository extends JpaRepository<Answer,Integer>{
+	public List<Answer> findByStatus(boolean status);
 }

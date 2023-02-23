@@ -1,7 +1,6 @@
 package com.cogent.requests;
 
-import java.util.Collection;
-
+import java.util.ArrayList;
 import com.cogent.entity.SimpleGrantedAuthority;
 
 import lombok.Data;
@@ -12,5 +11,5 @@ public class UserRequest {
 	private String password;
 	private String name;
 	private String email;
-	Collection<SimpleGrantedAuthority> authorities;
+	SimpleGrantedAuthority authorities;
 }

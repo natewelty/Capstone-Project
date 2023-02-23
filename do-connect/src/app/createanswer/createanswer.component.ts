@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+
 import { Answer } from '../answer';
 import { AnswerService } from '../answer.service';
 import { Router } from '@angular/router';
 import { AnswerRequest } from '../answerrequest';
+
 
 @Component({
   selector: 'app-createanswer',
@@ -10,6 +12,7 @@ import { AnswerRequest } from '../answerrequest';
   styleUrls: ['./createanswer.component.css']
 })
 export class CreateanswerComponent {
+
   answerRequest:AnswerRequest = new AnswerRequest(0,"","","");
   constructor(private answerService:AnswerService, private router:Router){}
   createAnswer:any[]=[{}];
@@ -27,4 +30,5 @@ onSubmit(){
   console.log(this.answerRequest);
   this.createnewanswer();
 }
+
 }

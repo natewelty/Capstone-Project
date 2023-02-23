@@ -1,0 +1,48 @@
+package com.cogent.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cogent.entity.Answer;
+import com.cogent.repository.AnswerRepository;
+import com.cogent.request.AnswerRequest;
+
+@Service
+public class AnswerService {
+	@Autowired
+	private AnswerRepository answerRepo;
+
+	public void createAnswer(AnswerRequest ansRequest) {
+		Answer answer = new Answer(ansRequest);
+
+		answerRepo.save(answer);
+
+	}
+
+	public List<Answer> readAll() {
+		return answerRepo.findAll();
+	}
+
+	public Answer readById(int id) {
+		return answerRepo.findById(id).orElseThrow();
+	}
+
+	public Answer update(Answer ans) {
+		return answerRepo.save(ans);
+	}
+	public List<Answer> findbyStatus(){
+		return answerRepo.findByStatus(false);
+	}
+	public Answer delete(Integer id) {
+		answerRepo.deleteById(id);
+		return null;
+	}
+	public List<Answer> findAnswerByQuestionId(int id){
+		List<Answer> list=answerRepo.findAll();
+		return list.stream().filter(s->s.getQuestion().getId()==id).toList();
+		}
+
+}
