@@ -11,12 +11,16 @@ import { User } from '../user';
 })
 export class ChatdashboardComponent implements OnInit {
   userList = this.userService.getAllUsers();
- 
+  name!: String;
   tableData:any[]=[{}];
 
   constructor(private userService:UserService, private router:Router){}
   ngOnInit(){
     this.userList.subscribe(u=> {this.tableData = u as User[]});
+  }
+
+  onClick(name: String){
+    this.router.navigateByUrl(`/chatroom/${this.userService.user.name}/${name}`);
   }
   
 

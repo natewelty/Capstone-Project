@@ -20,9 +20,8 @@ const routes: Routes = [{path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'pendingquestioncomponent', component: PendingquestionComponent},
   {path: 'pendinganswercomponent', component: PendinganswerComponent},
   {path: 'chatdashboard', component: ChatdashboardComponent},
-  {path: 'chatroom', component: ChatroomComponent},
-
-  {path: 'displayquestion/:id', component: DisplayquestionComponent},
+  {path: 'chatroom/:user1/:user2', component: ChatroomComponent},
+  {path: 'displayquestion/:id', component: DisplayquestionComponent}
 
 ];
 
