@@ -39,6 +39,8 @@ export class LoginComponent {
     console.log(this.userService.user);
     console.log(this.userService.isLoggedIn());
     console.log(this.userService.isAdmin());
+    this.router.navigate(['chatdashboard']);
+    
   }
   isLoggedIn():boolean{
     return this.userService.isLoggedIn();

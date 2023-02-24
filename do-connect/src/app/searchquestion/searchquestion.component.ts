@@ -12,18 +12,14 @@ import { zipAll } from 'rxjs';
 })
 export class SearchquestionComponent {
   //question:Question = new Question(0, "", "", false, "");
-  question[]:Question[];
-  constructor(private quesionService:QuestionService, private router:Router){
-    this.buildTable();
+  question!:Question;
+  constructor(private questionService:QuestionService, private router:Router){
   }
   searchResponse:any[] = [{}];
-  buildTable(){
-    let questionObserver = this.questionService.getFalseQuestion();
-    questionObserver.subscribe(q=>{this.question = q as Question[]})
-  }
+  
   search(){
     if(this.question.id !=null){
-      let questionObserver = this.quesionService.getQuestionById(this.question.id);
+      let questionObserver = this.questionService.getQuestionById(this.question.id);
       questionObserver.subscribe(question =>{this.searchResponse[0]= question as Question});
     } else if(this.question.topic != null){
 

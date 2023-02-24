@@ -16,6 +16,7 @@ export class ChatdashboardComponent{
 constructor(private userService:UserService, private router:Router){}
 onSubmit(){
   this.userList.subscribe(u=> {this.tableData = u as User[]});
+  console.log(this.userService.user);
 }
 
 
