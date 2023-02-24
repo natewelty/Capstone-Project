@@ -1,16 +1,15 @@
-export class questionrequest{
-    id:number;
-    username:string;
-    password:string;
-    name:string;
-    email:string;
-    authorities:any[];
-    constructor(id:number=0, username:string="", password:string="", name:string="",email:string="",authorities:any[]){
-        this.id=id;
-        this.username=username;
-        this.password=password;
-        this.name=name;
-        this.email=email;
-        this.authorities=authorities;
+export class QuestionRequest{
+    description_question:string;
+    image_src:string;
+    title:string;
+    topic:string;
+    qcreated_by:string;
+    constructor( title:string="", topic:string="", description_question:string="",image_src:string="",qcreated_by:string=""){
+        this.title=title;
+        this.topic=topic;
+        this.description_question=description_question;
+        this.image_src=image_src;
+        this.qcreated_by=qcreated_by;
+        
     }
 }

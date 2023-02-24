@@ -24,9 +24,9 @@ public class QuestionController {
 	QuestionService questionService;
 	
 	@PostMapping("/question/create")
-	public String addQuestion(@RequestBody QuestionRequest questionRequest ) {
-		questionService.createQuestion(new Question(questionRequest));
-		return "Question asked";
+	public int addQuestion(@RequestBody QuestionRequest questionRequest ) {
+		int id = questionService.createQuestion(new Question(questionRequest));
+		return id;
 		
 	}
 	@GetMapping("/question/read/all")

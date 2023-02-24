@@ -15,9 +15,9 @@ public class QuestionService {
 	private QuestionRepository questionRepo;
 	
 	
-	public void createQuestion(Question question) {
-		questionRepo.save(question);
-		
+	public int createQuestion(Question question) {
+		Question questionResult =questionRepo.save(question);
+		return questionResult.getId();
 	}
 	public List<Question> getAll(){
 		return questionRepo.findAll();

@@ -12,4 +12,7 @@ constructor(private userService:UserService){}
 isNotLoggedIn():boolean{
   return !this.userService.isLoggedIn();
 }
+isLoggedIn():boolean{
+  return this.userService.isLoggedIn();
+}
 }
