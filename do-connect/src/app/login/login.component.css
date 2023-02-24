@@ -1,9 +1,8 @@
-#loginTile {
-   
-        border-radius: 25px;
-        background: #73AD21;
-        padding: 20px;
-        width: 200px;
-        height: 150px;
-      
+.myForm{
+    border-radius: 20px;
+    border: 5px;
+    border-style: groove;
+    border-color:black;
+    background-color: aqua;
+    
 }

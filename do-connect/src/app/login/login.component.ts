@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { UserAuthenticationRequest } from '../userauthenticationrequest';
@@ -17,14 +18,34 @@ export class LoginComponent {
     this.userService.login(this.loginInfo).subscribe(data=>{
       console.log(data);
       localStorage.setItem("access_token",data.token);
-      this.goToHomePage();
+      let user = this.userService.getUserByUsername(this.loginInfo.username);
+      user.subscribe(u=>{
+        console.log("This is u: ");
+        console.log(u);
+        this.userService.setUser(u)});
+        
+      
     },
+
     error=>console.log(error))
+    
   }
 
   goToHomePage(){
     this.router.navigate(['/']);
   }
+
+  onSubmit2(){
+    console.log(this.userService.user);
+    console.log(this.userService.isLoggedIn());
+    console.log(this.userService.isAdmin());
+    this.router.navigate(['chatdashboard']);
+    
+  }
+  isLoggedIn():boolean{
+    return this.userService.isLoggedIn();
+  }
+  
 
   onSubmit(){
     console.log(this.loginInfo);
