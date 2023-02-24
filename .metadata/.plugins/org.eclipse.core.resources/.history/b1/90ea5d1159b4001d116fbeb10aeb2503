@@ -41,10 +41,6 @@ public class UserController {
 	public void login() {
 		System.out.println("Login attempted.");
 	}
-	@GetMapping("/user/read/{username}")
-	public CustomUser getUserByUsername(@PathVariable("username") String username) {
-		return userService.readUserByUsername(username);
-	}
 	
 	@GetMapping("/user/read/all")
 	public List<CustomUser> getAllUsers(){

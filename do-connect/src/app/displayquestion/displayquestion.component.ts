@@ -12,6 +12,7 @@ import { Observable, queue } from 'rxjs';
   styleUrls: ['./displayquestion.component.css']
 })
 export class DisplayquestionComponent {
+
   
 id: number =1;
   
@@ -35,5 +36,6 @@ checkLoad():boolean{
     return true;
   }
   return false;
+
 }
 }

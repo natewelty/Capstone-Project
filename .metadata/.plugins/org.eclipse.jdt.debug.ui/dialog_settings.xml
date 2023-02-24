@@ -3,9 +3,18 @@
 	<section name="expressionHistory">
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
-		<item key="WIDTH" value="910"/>
+		<item key="WIDTH" value="906"/>
 		<item key="HEIGHT" value="262"/>
 		<item key="SashWeightTree" value="500"/>
 		<item key="SashWeightDetails" value="500"/>
+	</section>
+	<section name="STRING_VALUE_INPUT_DIALOG">
+		<item key="USE_EVALUATION" value="false"/>
+		<item key="WRAP_TEXT" value="true"/>
+		<item key="DIALOG_X_ORIGIN" value="459"/>
+		<item key="DIALOG_Y_ORIGIN" value="96"/>
+		<item key="DIALOG_WIDTH" value="372"/>
+		<item key="DIALOG_HEIGHT" value="444"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|18.0|0|WINDOWS|1|-24|0|0|0|400|0|0|0|0|3|2|1|34|Segoe UI"/>
 	</section>
 </section>

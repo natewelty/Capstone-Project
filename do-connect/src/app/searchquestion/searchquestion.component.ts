@@ -11,20 +11,23 @@ import { zipAll } from 'rxjs';
   styleUrls: ['./searchquestion.component.css']
 })
 export class SearchquestionComponent {
-  question:Question = new Question(0, "", "", false, "");
-  
-  constructor(private quesionService:QuestionService, private router:Router){
-    
+
+  //question:Question = new Question(0, "", "", false, "");
+  question!:Question;
+  constructor(private questionService:QuestionService, private router:Router){
+
   }
   searchResponse:any[] = [{}];
   
   search(){
     if(this.question.id !=null){
-      let questionObserver = this.quesionService.getQuestionById(this.question.id);
+      let questionObserver = this.questionService.getQuestionById(this.question.id);
       questionObserver.subscribe(question =>{this.searchResponse[0]= question as Question});
+
       console.log("sending");
       this.searchResponse[0].id=1;
       this.router.navigateByUrl(`/displayquestion/${this.searchResponse[0].id}`);
+
     } else if(this.question.topic != null){
 
     }
