@@ -22,6 +22,11 @@
             <input type="password" class="form-control" id="registrationPassword"
                 [(ngModel)]="registrationInfo.password" name="password">
         </div>
+        <div class="form-group">
+            <label> Role</label>
+            <input type="text" class="form-control" id="registrationRole" [(ngModel)]="registrationInfo.role"
+                name="role">
+        </div>
 
         <button class="btn btn-success" type="submit">Submit</button>
 
