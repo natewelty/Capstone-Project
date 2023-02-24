@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Question } from 'app/question';
 import { QuestionService } from 'app/question.service';
+import { zipAll } from 'rxjs';
 
 
 @Component({
@@ -18,9 +19,11 @@ export class SearchquestionComponent {
     if(this.question.id !=null){
       let questionObserver = this.quesionService.getQuestionById(this.question.id);
       questionObserver.subscribe(question =>{this.searchResponse[0]= question as Question});
+    } else if(this.question.topic != null){
 
-
-
+    }
+    else{
+      //search all
     }
    
     

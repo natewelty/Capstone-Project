@@ -6,14 +6,15 @@ import { UserAuthenticationRequest } from './userauthenticationrequest';
 import { UserRequest } from './userrequest';
 import { User } from './user';
 import { Token } from './token';
-
+import { tokenGetter } from './app.module';
+import { JwtHelperService } from '@auth0/angular-jwt';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
+  
   private baseURL= "http://localhost:8080/user"
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private jwtHelper:JwtHelperService) { }
 
   signup(user:UserCreateRequest):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}/adduser`,user);
@@ -33,4 +34,5 @@ export class UserService {
   getUsersByRole(role:string):Observable<User[]>{
     return this.httpClient.get<User[]>(`${this.baseURL}/read/role/${role}`);
   }
+ 
 }
