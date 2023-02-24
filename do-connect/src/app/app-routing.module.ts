@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChatdashboardComponent } from './chatdashboard/chatdashboard.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { CreateanswerComponent } from './createanswer/createanswer.component';
+import { DisplayquestionComponent } from './displayquestion/displayquestion.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NewquestionComponent } from './newquestion/newquestion.component';
@@ -19,7 +20,8 @@ const routes: Routes = [{path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'pendingquestioncomponent', component: PendingquestionComponent},
   {path: 'pendinganswercomponent', component: PendinganswerComponent},
   {path: 'chatdashboard', component: ChatdashboardComponent},
-  {path: 'chatroom', component: ChatroomComponent}
+  {path: 'chatroom', component: ChatroomComponent},
+  {path: 'displayquestion/:id', component: DisplayquestionComponent},
 ];
 
 @NgModule({

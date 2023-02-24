@@ -1,17 +1,24 @@
 <form (ngSubmit)="onSubmit()">
-    <button class ="btn btn-success" type="submit">Get pending Answers</button>
+    <button class="btn btn-success" type="submit">Get pending Answers</button>
 
 </form>
-<li *ngFor="let answer of tableData">
-    {{answer.id}} {{answer.description_answer}} {{answer.created_by}}
-</li>
+>
+<table *ngFor="let answer of tableData">
+    <tr>
+        <td>{{answer.id}}</td>
+        <td>{{answer.qid}}</td>
+        <td>{{answer.description_answer}}</td>
+        <td>{{answer.created_by}}</td>
+        <td>
+           <button>Approve</button>
+        </td>
+        <td><button >Reject</button></td>
+    </tr>
+</table>
 
-<!-- <div>
-    <select class="form-control" id="pendinganswer" ng-model="pendinganswer">
+<select class="form-control" id="pendinganswer" ng-model="pendinganswer">
 
-        <option value="pending" > Pending </option>
-        <option value="approved"> Approved </option>
-        <option value="rejected"> Rejected </option>
-    </select>
-
-</div> -->
+    <option value="pending"> Pending </option>
+    <option value="approved"> Approved </option>
+    <option value="rejected"> Rejected </option>
+</select>
