@@ -1,1 +1,17 @@
-<p>pendinganswer works!</p>
+<form (ngSubmit)="onSubmit()">
+    <button class ="btn btn-success" type="submit">Get pending Answers</button>
+
+</form>
+<li *ngFor="let answer of tableData">
+    {{answer.id}} {{answer.description_answer}} {{answer.created_by}}
+</li>
+
+<!-- <div>
+    <select class="form-control" id="pendinganswer" ng-model="pendinganswer">
+
+        <option value="pending" > Pending </option>
+        <option value="approved"> Approved </option>
+        <option value="rejected"> Rejected </option>
+    </select>
+
+</div> -->
