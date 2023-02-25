@@ -12,14 +12,12 @@
        
     </thead>
     <tbody>
-        <tr class = "border border-3  border-dark " *ngFor="let user of tableData">
+        <tr class = "border border-3  border-dark " *ngFor="let user of tableData" >
 
             <td class = "border border-3  border-dark " >{{ user.id }}</td>
             <td class = "border border-3  border-dark ">{{ user.name }}</td>
             <td class="text-dark border border-3  border-dark">
-                 <button class = "btn btn-dark"type="button" >
-                    <a class="nav-link active" aria-current="chatRoom" routerLink="/chatroom"> Chat Now</a>                  
-                </button>
+                 <button class = "btn btn-dark"type="button" (click)="onClick(user.name)"> Chat Now</button>
             </td>
            
         </tr>
