@@ -30,13 +30,13 @@ public class ChatService {
 		return cR.findById(id);
 	}
 
-	public List<Chat> findChat(String name1, String name2) {
+	public List<Chat> findChat(int id1, int id2) {
 		List<Chat> temp = cR.findAll();
 		List<Chat> newTemp = temp.stream()
-				.filter(s -> s.getFrom_user().compareToIgnoreCase(name2) == 0
-						|| s.getFrom_user().compareToIgnoreCase(name1) == 0)
-				.filter(s -> s.getTo_user().compareToIgnoreCase(name2) == 0
-						|| s.getTo_user().compareToIgnoreCase(name1) == 0)
+				.filter(s -> s.getFrom_user() == id1
+						|| s.getFrom_user() == id2)
+				.filter(s -> s.getTo_user() == id1
+						|| s.getTo_user() == id2)
 				.toList();
 
 		return newTemp;

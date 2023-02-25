@@ -26,9 +26,9 @@ public class AnswerController {
 	
 
 	@PostMapping("/answer/create")
-	public String writeAnswer(@RequestBody AnswerRequest ans) {
-		answerService.createAnswer(ans);
-		return "Answer added";
+	public Answer writeAnswer(@RequestBody AnswerRequest ans) {
+		
+		return answerService.createAnswer(ans);
 	}
 
 	@GetMapping("/answer/read/all")

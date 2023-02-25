@@ -1,5 +1,24 @@
 .questionDisplay{
+    margin:auto;
+    border-width: 5px;
+    border-color: black;
+    border-style: double;
+    width:70%;
+}
+.answerDisplay{
+    vertical-align: center;
+    margin:auto;
+    width:60%;
+    border: 5px;
+    outline-style: dotted;
+}
+.createAnswer{
+    width:60%;
+    margin:auto;
+}
+h1{
     align-items: center;
+    align-content: center;
+    margin: auto;
     text-align: center;
-    border:5px;
 }

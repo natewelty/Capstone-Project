@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Chat } from 'app/chat';
 import { ChatService } from 'app/chat.service';
+import { ChatRequest } from 'app/chatrequest';
 import { UserService } from 'app/user.service';
 
 @Component({
@@ -9,16 +11,47 @@ import { UserService } from 'app/user.service';
   styleUrls: ['./chatroom.component.css']
 })
 export class ChatroomComponent  implements OnInit {
-  user = this.userService.user;
-  name!: string;
-  chatList = this.chatService.getHistory(this.user.name,this.name);
+  fromUser = this.userService.user;
+  toUser!: number;
+  chatHistory!:Chat[];
+  chatRequest!:ChatRequest;
+  
   constructor(private userService:UserService, private router:Router, private chatService:ChatService, private route: ActivatedRoute){
   }
   ngOnInit() {
-    this.route.paramMap.subscribe(params => this.name = params.get('users2') as unknown as string);
+    this.route.paramMap.subscribe(params => this.toUser = params.get('user2') as unknown as number);
+    console.log("to user is " + this.toUser);
+    this.getChat();
+    this.chatRequest = new ChatRequest(this.fromUser.id,this.toUser,"");
+    }
   
+  
+  isCurrentUser(userId:number):boolean{
+    if(userId === this.fromUser.id){
+      return true;
+    }
+    return false;
+  }
+  isNotCurrentUser(userId:number):boolean{
+    if(userId === this.fromUser.id){
+      return false;
+    }
+    return true;
   }
   
  
+  getChat(){
+    let chatList = this.chatService.getHistory(this.fromUser.id,this.toUser);
+    console.log("to user is still " + this.toUser);
+    chatList.subscribe(response=>{this.chatHistory=response as Chat[];});
+  }
+
+  onSubmit(){
+    let chatSent = this.chatService.Addmsg(this.chatRequest);
+    chatSent.subscribe(response=>{
+      console.log(this.chatRequest);
+      this.getChat();
+    });
+  }
  
 }

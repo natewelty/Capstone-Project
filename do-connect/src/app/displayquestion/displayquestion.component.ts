@@ -21,7 +21,7 @@ id: number =1;
  
   
 question!:Question;
-answers!:Answer[];
+
 constructor(private userService:UserService, private questionService:QuestionService,private answerService:AnswerService, private route:ActivatedRoute, private router:Router){
   
 }
@@ -31,10 +31,13 @@ ngOnInit(){
   console.log(this.id);
   let questionGrab = this.questionService.getQuestionById(this.id);
   console.log(questionGrab)
-  questionGrab.subscribe(q=>{this.question=q as Question})
-  let answerGrab = this.answerService.getanswerbyqid(this.question.id);
-  answerGrab.subscribe(a=>this.answers = a as Answer[]);
+  questionGrab.subscribe(q=>{this.question=q as Question;
+    
+  
+  })
+  
 }
+
 
 checkLoad():boolean{
   if(this.question.title.length>1){

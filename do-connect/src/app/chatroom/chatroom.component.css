@@ -1,0 +1,23 @@
+.sent{
+    background-color: aqua;
+}
+.received{
+    background-color: lawngreen;
+    text-align: right;
+}
+.receivedDate{
+    text-align: right;
+    width: 85%;
+}
+.sentDate{
+    text-align:left;
+    width:40%;
+}
+.chatDisplay{
+    width:50%;
+    margin: auto;
+}
+.chatCreate{
+    margin:auto;
+    width:50%;
+}

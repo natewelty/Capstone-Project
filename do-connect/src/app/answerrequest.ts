@@ -1,15 +1,15 @@
 export class AnswerRequest{
   
-    qid:number;
+    questionId:number;
     description_answer:string;
     img_src:string;
   
     created_by:string;
    
  
-    constructor( qid:number=0, description_answer:string="",img_src:string="",created_by:string="" ){
+    constructor( qid:number, description_answer:string="",img_src:string="",created_by:string="" ){
     
-     this.qid=qid;
+     this.questionId=qid;
      this.description_answer=description_answer;
      this.img_src=img_src;
      

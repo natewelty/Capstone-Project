@@ -16,11 +16,11 @@ public class AnswerService {
 	@Autowired
 	private QuestionService questionService;
 
-	public void createAnswer(AnswerRequest ansRequest) {
+	public Answer createAnswer(AnswerRequest ansRequest) {
 		ansRequest.setQuestion(questionService.getById(ansRequest.questionId));
 		Answer answer = new Answer(ansRequest);
 		questionService.getById(ansRequest.questionId).addAnswer(answer);
-		answerRepo.save(answer);
+		return answerRepo.save(answer);
 
 	}
 

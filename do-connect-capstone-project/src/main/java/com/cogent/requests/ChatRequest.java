@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 
 public class ChatRequest {
-	private String from_user;
-	private String to_user;
+	private int from_user;
+	private int to_user;
 	private String message;
 	
 }

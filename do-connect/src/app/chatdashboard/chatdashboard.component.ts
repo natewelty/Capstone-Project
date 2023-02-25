@@ -11,21 +11,24 @@ import { User } from '../user';
 })
 export class ChatdashboardComponent implements OnInit {
   userList = this.userService.getAllUsers();
-  name!: String;
-  tableData:any[]=[{}];
+  
+  
+  tableData!:User[];
 
   constructor(private userService:UserService, private router:Router){}
   ngOnInit(){
     this.userList.subscribe(u=> {this.tableData = u as User[]});
   }
 
-  onClick(name: String){
-    this.router.navigateByUrl(`/chatroom/${this.userService.user.name}/${name}`);
+  onClick(id:number){
+    this.router.navigateByUrl(`/chatroom/${this.userService.user.id}/${id}`);
   }
   
-
-  onClick(name:string){
-    this.router.navigateByUrl(`/chatroom/${this.userService.user.name}/${name}`);
+  notCurrentUser(user:User):boolean{
+    if (user.id===this.userService.user.id){
+      return false;
+    }
+    return true;
   }
 
 }

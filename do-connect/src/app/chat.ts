@@ -1,17 +1,17 @@
 export class Chat{
     id:number;
-    from_user: string;
-	to_user: string;
+    from_user: number;
+	to_user: number;
 	message: string;
-	OffsetDateTime: Date;
-    constructor(id:number=0,from_user: string="",
-                to_user: string ="",message: string="",OffsetDateTime: Date= new Date())
+	datetime: Date;
+    constructor(id:number=0,from_user: number=0,
+                to_user: number =0,message: string="",datetime: Date= new Date())
     {
         this.id = id;
         this.from_user = from_user;
         this.to_user = to_user;
         this.message = message;
-        this.OffsetDateTime = OffsetDateTime;
+        this.datetime = datetime;
 
     }
 }
