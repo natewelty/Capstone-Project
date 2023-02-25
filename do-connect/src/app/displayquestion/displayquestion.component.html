@@ -4,3 +4,11 @@
     <p>{{question.description_question}}</p>
     <p>Created by: {{question.qcreated_by}} on {{question.datetime}}</p>
 </div>
+<div class = "answerDisplay">
+    <table *ngFor="let answer in answers">
+        <tr>
+            <td>{{answer.description_answer}}</td>
+            <td>{{answer.created_by}}</td>
+        </tr>
+    </table>
+</div>

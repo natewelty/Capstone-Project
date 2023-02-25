@@ -20,6 +20,8 @@ export class ChatdashboardComponent implements OnInit {
   }
   
 
-
+  onClick(name:string){
+    this.router.navigateByUrl(`/chatroom/${this.userService.user.name}/${name}`);
+  }
 
 }
