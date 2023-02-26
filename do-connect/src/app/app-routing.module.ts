@@ -21,7 +21,8 @@ const routes: Routes = [{path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'pendinganswercomponent', component: PendinganswerComponent},
   {path: 'chatdashboard', component: ChatdashboardComponent},
   {path: 'chatroom/:user1/:user2', component: ChatroomComponent},
-  {path: 'displayquestion/:id', component: DisplayquestionComponent}
+  {path: 'displayquestion/:id', component: DisplayquestionComponent},
+
 
 ];
 

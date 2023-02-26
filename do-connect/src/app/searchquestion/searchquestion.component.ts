@@ -12,33 +12,35 @@ import { zipAll } from 'rxjs';
 })
 export class SearchquestionComponent {
 
-  //question:Question = new Question(0, "", "", false, "");
-  question!:Question;
+  question:Question = new Question(0, "", "", false, "");
+  //question!:Question;
   constructor(private questionService:QuestionService, private router:Router){
 
   }
   searchResponse:any[] = [{}];
-  
+  displayTopicResults:boolean=false;
   search(){
-    if(this.question.id !=null){
+    if(this.question.id !=0){
       let questionObserver = this.questionService.getQuestionById(this.question.id);
-      questionObserver.subscribe(question =>{this.searchResponse[0]= question as Question});
-
-      console.log("sending");
-      this.searchResponse[0].id=1;
-      this.router.navigateByUrl(`/displayquestion/${this.searchResponse[0].id}`);
+      questionObserver.subscribe(question =>{this.searchResponse[0]= question as Question;
+        this.router.navigateByUrl(`/displayquestion/${this.searchResponse[0].id}`);
+      });
 
     } else if(this.question.topic != null){
-
+      console.log("searching by topic " + this.question.topic)
+      let questionObserver = this.questionService.findByTopic(this.question.topic);
+      questionObserver.subscribe(response =>{this.searchResponse =response as Question[];
+        this.displayTopicResults=true;
+      })
     }
     else{
       //search all
     }
-   
-    
-   
   }
 
+  select(id:number){
+    this.router.navigateByUrl(`/displayquestion/${id}`);
+  }
   goToHomePage(){
     this.router.navigate(['/']);
   }

@@ -5,19 +5,20 @@
 <table class="table table-bordered border-dark  table-sm">
     <thead >
         <tr class="table-dark">
+            
             <th>ID</th>
             <th>Name</th>
             <th>Action</th>
         </tr>
        
     </thead>
-    <tbody>
-        <tr class = "border border-3  border-dark " *ngFor="let user of tableData" >
-
-            <td class = "border border-3  border-dark " >{{ user.id }}</td>
-            <td class = "border border-3  border-dark ">{{ user.name }}</td>
+    <tbody *ngFor="let user of tableData;" >
+        <tr class = "border border-3  border-dark " *ngIf="notCurrentUser(user)">
+            
+            <td class = "border border-3  border-dark " >{{user.id}}</td>
+            <td class = "border border-3  border-dark ">{{user.name}}</td>
             <td class="text-dark border border-3  border-dark">
-                 <button class = "btn btn-dark"type="button" (click)="onClick(user.name)"> Chat Now</button>
+                 <button class = "btn btn-dark" type="button" (click)="onClick(user.id)"> Chat Now</button>
             </td>
            
         </tr>

@@ -23,8 +23,8 @@ export class ChatService {
     return this.httpClient.get<Chat[]>(`${this.baseURL}/read/all`);
   }
 
-  getHistory(name1:string, name2:string): Observable<Chat[]>{
-    return this.httpClient.get<Chat[]>(`${this.baseURL}/read/history/${name1}/${name2}`);
+  getHistory(id1:number, id2:number): Observable<Chat[]>{
+    return this.httpClient.get<Chat[]>(`${this.baseURL}/read/history/${id1}/${id2}`);
   }
 
 	

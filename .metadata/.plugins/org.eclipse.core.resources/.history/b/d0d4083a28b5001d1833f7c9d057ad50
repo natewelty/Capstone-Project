@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.cogent.entity.Answer;
 import com.cogent.entity.Question;
 import com.cogent.repository.QuestionRepository;
+import com.cogent.requests.QuestionRequest;
 
 @Service
 public class QuestionService {
@@ -15,8 +16,8 @@ public class QuestionService {
 	private QuestionRepository questionRepo;
 	
 	
-	public int createQuestion(Question question) {
-		Question questionResult =questionRepo.save(question);
+	public int createQuestion(QuestionRequest questionRequest) {
+		Question questionResult =questionRepo.save(new Question(questionRequest));
 		return questionResult.getId();
 	}
 	public List<Question> getAll(){
@@ -26,8 +27,6 @@ public class QuestionService {
 		return questionRepo.findById(id).orElseThrow();
 	}
 	public Question update(Question question) {
-		Question questionBefore = questionRepo.findById(question.getId()).get();
-		question.setAnswers(questionBefore.getAnswers());
 		return questionRepo.save(question);
 	}
 	

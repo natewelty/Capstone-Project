@@ -34,7 +34,7 @@ export class AnswerService {
   deleteanswer(id:number): Observable<Answer>{
     return this.httpClient.delete<Answer>(`${this.baseURL}/delete/${id}`);
   }
-  getanswerbyqid(qid:number): Observable<Answer>{
-    return this.httpClient.get<Answer>(`${this.baseURL}/read/qid/${qid}`)
+  getanswerbyqid(qid:number): Observable<Answer[]>{
+    return this.httpClient.get<Answer[]>(`${this.baseURL}/read/qid/${qid}`)
   }
 }

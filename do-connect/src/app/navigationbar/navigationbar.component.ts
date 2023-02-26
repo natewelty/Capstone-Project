@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'app/user';
 import { UserService } from 'app/user.service';
 
 @Component({
@@ -14,5 +15,11 @@ isNotLoggedIn():boolean{
 }
 isLoggedIn():boolean{
   return this.userService.isLoggedIn();
+}
+logout(){
+  this.userService.user = new User();
+}
+isAdmin(){
+  return this.userService.isAdmin();
 }
 }

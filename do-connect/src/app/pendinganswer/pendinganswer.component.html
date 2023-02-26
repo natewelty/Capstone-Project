@@ -1,24 +1,12 @@
-<form (ngSubmit)="onSubmit()">
-    <button class="btn btn-success" type="submit">Get pending Answers</button>
-
-</form>
->
-<table *ngFor="let answer of tableData">
+<h3>Answers</h3>
+<table *ngFor="let answer of tableData; index as i;" class="answerGrid">
     <tr>
         <td>{{answer.id}}</td>
         <td>{{answer.qid}}</td>
         <td>{{answer.description_answer}}</td>
         <td>{{answer.created_by}}</td>
-        <td>
-           <button>Approve</button>
-        </td>
-        <td><button >Reject</button></td>
+        <td><button (click)="accept(i)">Approve</button></td>
+        <td><button (click) ="reject(i)">Reject</button></td>
     </tr>
 </table>
 
-<select class="form-control" id="pendinganswer" ng-model="pendinganswer">
-
-    <option value="pending"> Pending </option>
-    <option value="approved"> Approved </option>
-    <option value="rejected"> Rejected </option>
-</select>

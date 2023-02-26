@@ -1,0 +1,18 @@
+h1,h3{
+    margin: auto;
+    text-align: center;
+}
+.wholeGrid{
+    margin: auto;
+    border: 5px;
+    border-style:groove;
+}
+.questionGrid{
+    
+    
+}
+.forCenterLine{
+    border-right-style:double;
+    border-right-width: 10px;
+    
+}

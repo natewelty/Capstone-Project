@@ -1,20 +1,33 @@
-<!-- <table  class="table table-bordered border-dark  table-sm">
-    <thead >
-        <tr class="table-dark">
-            <th>{{user.name}}</th>
-            <th>{{name}}</th>
-        </tr>
-       
-    </thead> 
-    <tbody ng>
-        <tr class = "border border-3  border-dark " *ngFor="let chat of chatData" >
-       
-            <td class = "border border-3  border-dark "  >{{ chat.message }}</td>
+
+<div class="chatDisplay">
+    <table *ngFor="let chat of chatHistory">
+        <tr *ngIf="isCurrentUser(chat.from_user)">
+            <td class="sent">{{chat.message}}</td>
             
-           <td class="text-dark border border-3  border-dark" *ngIf="chat.from_user" === {{name}}>
-                 <button class = "btn btn-dark"type="button" (click)="onClick(user.name)"> Chat Now</button>
-            </td> 
-           
+            <td class="sentDate">{{chat.datetime |date:'short'}}</td>
         </tr>
-    </tbody>
-</table> -->
+        <tr *ngIf="isNotCurrentUser(chat.from_user)">
+            <td class="receivedDate">{{chat.datetime |date:'short'}}</td>
+            
+            <td class="received">{{chat.message}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class = "chatCreate">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Send a message:</label>
+            <textarea class="form-control" id="createanswer" [(ngModel)]="chatRequest.message"
+                name="createanswer"></textarea>
+        </div>
+        <div>
+            <p>Submitting as: {{fromUser.name}}</p>
+        </div>
+
+
+        <button class="btn btn-success" type="submit">Submit Answer</button>
+    </form>
+</div>
+
