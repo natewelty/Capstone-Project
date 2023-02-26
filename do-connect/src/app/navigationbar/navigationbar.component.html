@@ -17,6 +17,18 @@
 
 
 
+        <div *ngIf="isAdmin()">
+          <li class = "nav-item">
+            <table>
+              <tr>
+                <td>
+                  <a class="nav-link active" aria-current="page" routerLink="/pendingquestioncomponent">Admin</a>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </div>
+
 
         <div>
           <li class="nav-item">

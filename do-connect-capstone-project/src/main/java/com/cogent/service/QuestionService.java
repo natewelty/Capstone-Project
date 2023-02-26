@@ -26,6 +26,8 @@ public class QuestionService {
 		return questionRepo.findById(id).orElseThrow();
 	}
 	public Question update(Question question) {
+		Question questionBefore = questionRepo.findById(question.getId()).get();
+		question.setAnswers(questionBefore.getAnswers());
 		return questionRepo.save(question);
 	}
 	

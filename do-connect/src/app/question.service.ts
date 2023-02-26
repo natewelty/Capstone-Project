@@ -25,7 +25,7 @@ export class QuestionService {
     return this.httpClient.put(`${this.baseURL}/update`,question);
   }
   deleteById(id:number):Observable<Question> {
-    return this.httpClient.delete<Question>(`${this.baseURL}/delete${id}`);
+    return this.httpClient.delete<Question>(`${this.baseURL}/delete/${id}`);
 
   }
   getFalseQuestion():Observable<Question[]>{

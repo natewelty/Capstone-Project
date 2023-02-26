@@ -1,1 +1,33 @@
-<p>pendingquestion works!</p>
+<h1>Pending Approval</h1>
+
+<table class="wholeGrid">
+
+    <tr>
+        <td class="forCenterLine">
+            
+
+
+
+            <h3>Questions</h3>
+            <table *ngFor="let question of tableData; index as i;" class="questionGrid">
+                <tr>
+                    <td>{{question.id}}</td>
+                    <td>{{question.title}}</td>
+                    <td>{{question.topic}}</td>
+                    <td>{{question.description_question}}</td>
+                    <td>{{question.qcreated_by}}</td>
+                    <td><button (click)="accept(i)">Approve</button></td>
+                    <td><button (click) ="reject(i)">Reject</button></td>
+                </tr>
+            </table>
+
+
+
+
+
+        </td>
+        <td>
+            <app-pendinganswer></app-pendinganswer>
+        </td>
+    </tr>
+</table>

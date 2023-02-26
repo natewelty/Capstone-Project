@@ -45,9 +45,9 @@ public class QuestionController {
 		return questionService.update(question);
 	}
 	@DeleteMapping("/question/delete/{id}")
-	public String deleteById(@PathVariable("id") int id){
+	public void deleteById(@PathVariable("id") int id){
 		
-		return questionService.deleteById(id);
+		System.out.println(questionService.deleteById(id));
 		
 	}
 	@GetMapping("/question/read/unapproved")

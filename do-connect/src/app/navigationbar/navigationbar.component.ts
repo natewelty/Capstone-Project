@@ -19,4 +19,7 @@ isLoggedIn():boolean{
 logout(){
   this.userService.user = new User();
 }
+isAdmin(){
+  return this.userService.isAdmin();
+}
 }

@@ -57,9 +57,8 @@ public class AnswerController {
 	}
 
 	@DeleteMapping("/answer/delete/{id}")
-	public String deleteById(@PathVariable("id") Integer id) {
-
-		return answerService.delete(id);
+	public void deleteById(@PathVariable("id") Integer id) {
+		System.out.println(answerService.delete(id));
 
 	}
 
@@ -67,7 +66,6 @@ public class AnswerController {
 	public List<Answer> findbyQid(@PathVariable("id") Integer id) {
 		List<Answer> list = answerService.findAnswerByQuestionId(id);
 		return list;
-
 	}
 
 }
