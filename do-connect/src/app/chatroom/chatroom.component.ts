@@ -12,11 +12,11 @@ export class ChatroomComponent  implements OnInit {
   user = this.userService.user;
   name!: string;
   chatList = this.chatService.getHistory(this.user.name,this.name);
-  constructor(private userService:UserService, private router:Router, private chatService:ChatService, private route: ActivatedRoute){
+  constructor(private userService:UserService, private router:Router, private chatService:ChatService, private route: ActivatedRoute){  
   }
   ngOnInit() {
     this.route.paramMap.subscribe(params => this.name = params.get('users2') as unknown as string);
-  
+   
   }
   
  

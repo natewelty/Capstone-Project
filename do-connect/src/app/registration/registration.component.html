@@ -1,4 +1,5 @@
-<div>
+
+<!-- <div>
     <h3> Register </h3>
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -31,4 +32,61 @@
         <button class="btn btn-success" type="submit">Submit</button>
 
     </form>
-</div>
+</div> -->
+<form (ngSubmit)="onSubmit()">
+    <section class="w-50 px-4 py-5 " style="border-radius: .5rem .5rem 0 0; float: left;">
+      
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+                <div class="mb-md-5 mt-md-4 pb-5">
+    
+                  <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+                  
+
+                <div class="form-group form-outline form-white mb-4" style="margin-top:120px">
+                   
+                    <input type="text" class="form-control" id="registrationName" [(ngModel)]="registrationInfo.name"
+                        name="username">
+                    <label> Name</label>
+                </div>
+                
+                
+                <div class="form-group form-outline form-white mb-4 " style="margin-top:50px">
+                    
+                    <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="registrationInfo.email"
+                        name="username">
+                    <label> Email</label>
+                </div>
+
+                <div class="form-group form-outline form-white mb-4 " style="margin-top:50px">
+                    
+                    <input type="text" class="form-control" id="registrationUsername" [(ngModel)]="registrationInfo.username"
+                        name="username">
+                    <label> Username</label>    
+                </div>
+        
+                <div class="form-group form-outline form-white mb-4 " style="margin-top:50px">
+                    
+                    <input type="password" class="form-control" id="registrationPassword"
+                        [(ngModel)]="registrationInfo.password" name="password">
+                    <label> Password</label>
+                </div>
+                <div class="form-group form-outline form-white mb-4 " style="margin-top:50px">
+                    
+                    <input type="text" class="form-control" id="registrationRole" [(ngModel)]="registrationInfo.role" 
+                    name="role">
+                    <label> Role</label>
+                </div>
+        
+                <button class="btn btn-success btn-outline-light btn-lg px-5" type="submit" style="margin-top:50px">Submit</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</form>
