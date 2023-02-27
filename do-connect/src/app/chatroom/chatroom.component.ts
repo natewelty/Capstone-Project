@@ -5,6 +5,8 @@ import { ChatService } from 'app/chat.service';
 import { ChatRequest } from 'app/chatrequest';
 import { User } from 'app/user';
 import { UserService } from 'app/user.service';
+import { Observable } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-chatroom',
@@ -18,6 +20,8 @@ export class ChatroomComponent  implements OnInit {
   chatHistory!:Chat[];
   chatRequest!:ChatRequest;
   toUser!: User;
+  sub!:any;
+  
   
   constructor(private userService:UserService, private router:Router, private chatService:ChatService, private route: ActivatedRoute){
   }
@@ -28,6 +32,10 @@ export class ChatroomComponent  implements OnInit {
     this.chatRequest = new ChatRequest(this.fromUser.id,this.toUserId,"");
     let userGraber = this.userService.getUserById(this.toUserId);
     userGraber.subscribe((response:any) => this.toUser = response as User);
+    
+    this.sub=interval(5000);
+    this.sub.subscribe((val: any)=>this.getChat());
+    
 
     }
   

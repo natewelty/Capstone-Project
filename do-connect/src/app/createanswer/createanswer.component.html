@@ -1,5 +1,5 @@
 <div>
-    <button (click)="getAnswers()"></button>
+    
     <div *ngIf="displayAnswerImage"><img [src]="imageToShow" alt="../../assets/src_imgs/R.png"></div>
     <div class="answerDisplay" *ngIf="displayAnswers">
         <table *ngFor="let answer of answers">

@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AnswerRequest } from '../answerrequest';
 import { UserService } from 'app/user.service';
 import { FileUploadService } from 'app/fileuploader.service';
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -20,6 +21,12 @@ export class CreateanswerComponent implements OnInit {
   imageToShow!: any;
   displayAnswers: boolean = false;
   displayAnswerImage:boolean=false;
+
+  sub=interval(500).subscribe((u:any)=>{this.getAnswers();
+  this.sub.unsubscribe;
+  });
+  
+
   constructor(private userService: UserService, private fileService: FileUploadService, private answerService: AnswerService, private router: Router) {
 
   }
@@ -55,16 +62,6 @@ export class CreateanswerComponent implements OnInit {
     let answerGrab = this.answerService.getanswerbyqid(this.questID);
     answerGrab.subscribe(a => {
       this.answers = a as Answer[];
-      // console.log(this.answers[1]);
-      // console.log(this.answers.length);
-      // for (var index in this.answers) {
-      //   console.log("image source" + this.answers[index].img_src);
-      //   if (this.answers[index].img_src.length > 1) {
-      //     let imageGrab = this.fileService.getFile(this.answers[index].img_src);
-      //     imageGrab.subscribe(response => { this.createImageFromBlob(response) });
-      //   }
-      // }
-      
       this.displayAnswers = true;
     });
   }

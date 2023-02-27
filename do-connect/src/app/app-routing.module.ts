@@ -9,11 +9,13 @@ import { LoginComponent } from './login/login.component';
 import { NewquestionComponent } from './newquestion/newquestion.component';
 import { PendinganswerComponent } from './pendinganswer/pendinganswer.component';
 import { PendingquestionComponent } from './pendingquestion/pendingquestion.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { SearchquestionComponent } from './searchquestion/searchquestion.component';
 
 const routes: Routes = [{path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'logincomponent', component: LoginComponent}, 
+  {path: 'logincomponent', component: LoginComponent},
+  {path: 'registrationcomponent',component:RegistrationComponent}, 
   {path: 'newquestioncomponent', component: NewquestionComponent},
   {path: 'searchquestioncomponent', component: SearchquestionComponent},
   {path: 'creatanswercomponent', component: CreateanswerComponent},

@@ -1,7 +1,7 @@
 
 <div class = "gradient-custom ">
-    
-        <div class="w-50 px-4 py-5 " style="border-radius: .5rem .5rem 0 0; float: left; ">
+    <div>
+        <section class=" px-4 py-5 " style="border-radius: .5rem .5rem 0 0;  height: 2000px; width:50%; margin:auto;">
       
         <div class="row d-flex justify-content-center">
           <div class="col-12 col-md-8 col-lg-6 col-xl-6">
@@ -25,7 +25,12 @@
                         <label> Password</label>
                     </div>
 
-                    <button class="btn btn-success btn-outline-light btn-lg px-5" type="submit">Login</button>
+                    <table style="margin:auto;">
+                        <tr>
+                            <td><button class="btn btn-success btn-outline-light btn-lg px-5" type="submit">Login</button></td>
+                            <td><button class="btn btn-success btn-outline-light btn-lg px-5" (click)="toSignup()">Signup</button></td>
+                        </tr>
+                    </table>
                 </form>
                 
                 </div>
@@ -33,20 +38,16 @@
             </div>
           </div>
         </div>
+      </section>
     </div>
-  
 
     <div>
-        <div ><app-registration></app-registration> </div>
+     
     </div>
 </div>
 
 
-<div>
-    <form (ngSubmit)="onSubmit2()" *ngIf="isLoggedIn()">
-        <button class="btn btn-success" type="submit">Fire Test</button>
-    </form>
-</div>
+
 
 
     

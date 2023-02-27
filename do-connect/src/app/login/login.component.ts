@@ -34,7 +34,9 @@ export class LoginComponent {
     error=>console.log(error))
     
   }
-
+  toSignup(){
+    this.router.navigate(['registrationcomponent']);
+  }
   goToHomePage(){
     this.router.navigate(['/']);
   }

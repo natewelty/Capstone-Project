@@ -19,7 +19,7 @@
            <td><h3>QID</h3></td>
            <td><h3>Desc</h3></td>
            <td><h3>Author</h3></td>
-           <td></td>
+           <td><h3>Image Source</h3></td>
            <td></td>
            <td></td>
            <td></td>
@@ -35,7 +35,7 @@
                     <td class = "border border-3  border-dark ">{{answer.description_answer}}</td>
                     <td class = "border border-3  border-dark ">{{answer.created_by}}</td>
                     <td class = "border border-3  border-dark ">{{answer.img_src}}</td>
-                    <td  class="text-dark border border-3  border-dark"><button *ngIf="answer.img_src" class = "btn btn-dark" (click)="showAnswerImage(answer.img_src)">Approve</button></td>
+                    <td  class="text-dark border border-3  border-dark"><button *ngIf="answer.img_src" class = "btn btn-dark" (click)="showAnswerImage(answer.img_src)">Show Image</button></td>
                     <td  class="text-dark border border-3  border-dark"><button  class = "btn btn-dark" (click)="accept(i)">Approve</button></td>
                     <td  class="text-dark border border-3  border-dark"><button class = "btn btn-dark" (click) ="reject(i)">Reject</button></td>
                 </tr>

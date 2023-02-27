@@ -19,6 +19,7 @@ export class RegistrationComponent {
       this.registrationInfo = new UserCreateRequest("","","USER","","");
       console.log(this.registrationInfo);
       alert("User created");
+      this.router.navigate(['logincomponent']);
     });
     
   }
