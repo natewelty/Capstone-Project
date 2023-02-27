@@ -31,12 +31,14 @@ ngOnInit(){
   this.route.paramMap.subscribe(params=> {this.id = params.get('id') as unknown as number
   console.log(this.id);
   let questionGrab = this.questionService.getQuestionById(this.id);
-  console.log(questionGrab)
+  
   questionGrab.subscribe(q=>{this.question=q as Question;
+    console.log("this is the question id in display question")
+    console.log(this.question.id);
     let imageGrab = this.fileService.getFile(this.question.image_src); 
     imageGrab.subscribe(response=>{
       this.createImageFromBlob(response);
-      
+
 
     })
   })

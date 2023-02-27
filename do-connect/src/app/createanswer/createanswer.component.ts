@@ -5,6 +5,7 @@ import { AnswerService } from '../answer.service';
 import { Router } from '@angular/router';
 import { AnswerRequest } from '../answerrequest';
 import { UserService } from 'app/user.service';
+import { FileUploadService } from 'app/fileuploader.service';
 
 
 @Component({
@@ -12,39 +13,81 @@ import { UserService } from 'app/user.service';
   templateUrl: './createanswer.component.html',
   styleUrls: ['./createanswer.component.css']
 })
-export class CreateanswerComponent implements OnInit{
-  @Input() questID!:number;
-  answerRequest:AnswerRequest = new AnswerRequest(0,"","","");
-  answers!:Answer[];
-  constructor(private userService:UserService, private answerService:AnswerService, private router:Router){
-    
+export class CreateanswerComponent implements OnInit {
+  @Input() questID!: number;
+  answerRequest: AnswerRequest = new AnswerRequest(0, "", "", "");
+  answers!: Answer[];
+  imageToShow!: any;
+  displayAnswers: boolean = false;
+  displayAnswerImage:boolean=false;
+  constructor(private userService: UserService, private fileService: FileUploadService, private answerService: AnswerService, private router: Router) {
+
   }
   ngOnInit(): void {
-    this.getAnswers();
+
+  }
+
+  userName: String = this.userService.user.name;
+  createnewanswer() {
+    let answerObserver = this.answerService.create(this.answerRequest);
+    this.answerRequest.questionId = this.questID;
+    this.answerRequest.created_by = this.userService.user.name;
+    answerObserver.subscribe(answer => {
+      console.log(answer)
+      this.getAnswers();
+      this.answerRequest = new AnswerRequest(0, "", "", "");
+    });
+
+  }
+  goToHomePage() {
+    this.router.navigate(['/']);
+  }
+  onSubmit() {
+    console.log(this.answerRequest);
+    this.createnewanswer();
+  }
+  save(image_src: string) {
+    this.answerRequest.img_src = image_src;
+  }
+  getAnswers() {
+    console.log("Beginning getAnswers()")
+    console.log(this.questID);
+    let answerGrab = this.answerService.getanswerbyqid(this.questID);
+    answerGrab.subscribe(a => {
+      this.answers = a as Answer[];
+      // console.log(this.answers[1]);
+      // console.log(this.answers.length);
+      // for (var index in this.answers) {
+      //   console.log("image source" + this.answers[index].img_src);
+      //   if (this.answers[index].img_src.length > 1) {
+      //     let imageGrab = this.fileService.getFile(this.answers[index].img_src);
+      //     imageGrab.subscribe(response => { this.createImageFromBlob(response) });
+      //   }
+      // }
+      
+      this.displayAnswers = true;
+    });
+  }
+  getImage(img_src:String){
+    let imageGrab = this.fileService.getFile(img_src);
+    imageGrab.subscribe(response => { this.createImageFromBlob(response) 
+    this.displayAnswerImage=true;
+    });
   }
   
-  userName:String = this.userService.user.name;
-createnewanswer(){
-    let answerObserver = this.answerService.create(this.answerRequest);
-    this.answerRequest.questionId=this.questID;
-    this.answerRequest.created_by=this.userService.user.name;
-    answerObserver.subscribe(answer=>{console.log(answer)
-    this.getAnswers();
-    this.answerRequest = new AnswerRequest(0,"","","");
-    });
-  
+
+
+  createImageFromBlob(image: Blob,) {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
+      this.imageToShow=reader.result;
+      
+    }, false);
+
+    if (image) {
+      reader.readAsDataURL(image);
+    }
+  }
 }
-goToHomePage(){
-  this.router.navigate(['/']);
-}
-onSubmit(){
-  console.log(this.answerRequest);
-  this.createnewanswer();
-}
-getAnswers(){
-  let answerGrab = this.answerService.getanswerbyqid(this.questID);
-    answerGrab.subscribe(a=>{this.answers = a as Answer[];
-      console.log("The answers have been loaded and should be displayed.");}
-      );
-}
-}
+
+

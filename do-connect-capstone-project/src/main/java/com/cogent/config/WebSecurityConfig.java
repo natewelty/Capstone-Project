@@ -42,7 +42,7 @@ public class WebSecurityConfig{
 		      .requestMatchers("/user/login/**")
 		      .anonymous()
 		      .requestMatchers(HttpMethod.DELETE)
-		      .hasRole("admin")
+		      .hasRole("ADMIN")
 		      .anyRequest()
 		      .authenticated()
 		      .and()
