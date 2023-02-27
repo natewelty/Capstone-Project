@@ -1,5 +1,4 @@
 <div>
-    <button (click)="getAnswers()"></button>
     <div *ngIf="displayAnswerImage"><img [src]="imageToShow" alt="../../assets/src_imgs/R.png"></div>
     <div class="answerDisplay" *ngIf="displayAnswers">
         <table *ngFor="let answer of answers">
@@ -11,17 +10,17 @@
             </tr>
         </table>
     </div>
-    <h5>Submit your own answer:</h5>
+    <h5 style="color: aliceblue;">Submit your own answer:</h5>
     <form (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-            <label> Create Answer</label>
+            <label style="color: aliceblue;"> Create Answer</label>
             <textarea class="form-control" id="createanswer" [(ngModel)]="answerRequest.description_answer"
                 name="createanswer"></textarea>
             <app-fileuploadcomponent (newFileUploadEvent)="save($event)"></app-fileuploadcomponent>
         </div>
         <div>
-            <p>Submitting as: {{userName}}</p>
+            <p style="color: aliceblue;">Submitting as: {{userName}}</p>
         </div>
 
 

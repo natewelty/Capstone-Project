@@ -1,11 +1,23 @@
-<div class="questionDisplay" *ngIf="checkLoad()">
-    <h1>{{question.title}}</h1>
-    <h2>in {{question.topic}}</h2>
-    <img [src] = "imageToShow" alt="../../assets/src_imgs/R.png"/>
-    <p>{{question.description_question}}</p>
-    <p>Created by: {{question.qcreated_by}} on {{question.datetime}}</p>
+<div class="gradient-custom " >
+    <div class = "questionBody" >
+        <div style="margin-top: 100px">
+            <div class="questionDisplay" *ngIf="checkLoad()" >
+                
+                <h1 > {{question.title}}</h1>
+                
+                <h2 >in {{question.topic}}</h2>
+                <img [src] = "imageToShow" alt="../../assets/src_imgs/R.png"/>
+                <p>{{question.description_question}}</p>
+                <p style="text-align: right">Created by: {{question.qcreated_by}} on {{question.datetime}}</p>
+            </div>
+            
+            <div class="createAnswer">
+                <app-createanswer [questID]="question.id"></app-createanswer>
+            </div>
+        </div>
+       
+    </div>
+   
 </div>
 
-<div class="createAnswer">
-    <app-createanswer [questID]="question.id"></app-createanswer>
-</div>
+

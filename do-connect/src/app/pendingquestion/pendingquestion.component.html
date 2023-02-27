@@ -31,47 +31,50 @@
         </td>
     </tr>
 </table> -->
-<div class = pendingTable>
-<h1>Pending Questions</h1>
-
-<table  class="table table-bordered border-dark  table-sm">
-    <thead>
-        <tr class="table-dark">
-           <td><h3>Id</h3></td>
-           <td><h3>Title</h3></td>
-           <td><h3>Topic</h3></td>
-           <td><h3>Description</h3></td>
-           <td><h3>Created By</h3></td>
-           <td><h3>Image Source</h3></td>
-           <td><h3></h3></td>
-           <td><h3></h3></td>
-           <td><h3></h3></td>
-        </tr>
+<div class="gradient-custom" >
+    <div class = pendingTable style="padding-top: 150px">
+        <h1>Pending Questions</h1>
         
-
-    </thead>
-    
-        <tbody *ngFor="let question of tableData; index as i;"  >
-                <tr class = "border border-3  border-dark " >
-                    <td class = "border border-3  border-dark ">{{question.id}}</td>
-                    <td class = "border border-3  border-dark ">{{question.title}}</td>
-                    <td class = "border border-3  border-dark ">{{question.topic}}</td>
-                    <td class = "border border-3  border-dark ">{{question.description_question}}</td>
-                    <td class = "border border-3  border-dark ">{{question.qcreated_by}}</td>
-                    <td class = "border border-3  border-dark ">{{question.image_src}}</td>
-                    
-                    <td  class="text-dark border border-3  border-dark"><button *ngIf="question.image_src" class = "btn btn-dark" (click)="showQuestionImage(question.image_src)">Show Image</button></td>
-                    <td  class="text-dark border border-3  border-dark"><button  class = "btn btn-dark" (click)="accept(i)">Approve</button></td>
-                    <td  class="text-dark border border-3  border-dark"><button class = "btn btn-dark" (click) ="reject(i)">Reject</button></td>
+        <table  class="table table-bordered border-dark  table-sm">
+            <thead>
+                <tr class="table-dark">
+                   <td><h3>Id</h3></td>
+                   <td><h3>Title</h3></td>
+                   <td><h3>Topic</h3></td>
+                   <td><h3>Description</h3></td>
+                   <td><h3>Created By</h3></td>
+                   <td><h3>Image Source</h3></td>
+                   <td><h3></h3></td>
+                   <td><h3></h3></td>
+                   <td><h3></h3></td>
                 </tr>
-        </tbody>        
-
-</table>
-<div class = "imageShow" *ngIf="showImage">
-    <img [src]="imageToShow" alt='../../assets/src_imgs/homepage2.jpeg'>
-</div>
-
-</div>
-<div class="pendingTable">
-    <app-pendinganswer></app-pendinganswer>
+                
+        
+            </thead>
+            
+                <tbody *ngFor="let question of tableData; index as i;"  >
+                        <tr class = "border border-3  border-dark " >
+                            <td class = "border border-3  border-dark ">{{question.id}}</td>
+                            <td class = "border border-3  border-dark ">{{question.title}}</td>
+                            <td class = "border border-3  border-dark ">{{question.topic}}</td>
+                            <td class = "border border-3  border-dark ">{{question.description_question}}</td>
+                            <td class = "border border-3  border-dark ">{{question.qcreated_by}}</td>
+                            <td class = "border border-3  border-dark ">{{question.image_src}}</td>
+                            
+                            <td  class="text-dark border border-3  border-dark"><button *ngIf="question.image_src" class = "btn btn-dark" (click)="showQuestionImage(question.image_src)">Show Image</button></td>
+                            <td  class="text-dark border border-3  border-dark"><button  class = "btn btn-dark" (click)="accept(i)">Approve</button></td>
+                            <td  class="text-dark border border-3  border-dark"><button class = "btn btn-dark" (click) ="reject(i)">Reject</button></td>
+                        </tr>
+                </tbody>        
+        
+        </table>
+        <div class = "imageShow" *ngIf="showImage">
+            <img [src]="imageToShow" alt='../../assets/src_imgs/homepage2.jpeg'>
+        </div>
+        
+        </div>
+        <div class="pendingTable">
+            <app-pendinganswer></app-pendinganswer>
+        </div>
+        
 </div>
