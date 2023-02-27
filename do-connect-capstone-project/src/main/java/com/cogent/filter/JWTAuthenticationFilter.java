@@ -40,15 +40,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .readValue(request.getInputStream(), UserAuthenticationRequest.class);
             UserDetails user = userDetailsService.loadUserByUsername(creds.getUsername());
             return authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                    creds.getUsername(),
-                    creds.getPassword(),
-                    user.getAuthorities())
+            		new UsernamePasswordAuthenticationToken(creds.getUsername(),creds.getPassword(),user.getAuthorities())
             );
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+	
 
     @Override protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) throws IOException, ServletException {
     	String token = JWT.create()

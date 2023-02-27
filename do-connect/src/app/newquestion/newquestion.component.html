@@ -1,26 +1,33 @@
-<div>
-    <h3> Submit a Question </h3>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label> Title</label>
-            <input type="text" class="form-control" id="registrationName" [(ngModel)]="newQuestion.title" name="username">
-        </div>
-        <div class="form-group">
-            <label>Topic</label>
-            <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="newQuestion.topic" name="username">
-        </div>
-        <div class="form-group">
-            <label> Question Description</label>
-            <textarea type="text" class="form-control" id="registrationUsername" [(ngModel)]="newQuestion.description_question" name="username"></textarea>
-        </div>
+<div class="background">
 
-        <div class="form-group">
-            <label> Image</label>
-            <input type="file" class="form-control" id="questionImage" name="img">
-        </div>
-        
 
-        <button class="btn btn-success" type="submit">Submit</button>
+    <div class="newQuestionForm">
+        <h3> Submit a Question </h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label> Title</label>
+                <input type="text" class="form-control" id="registrationName" [(ngModel)]="newQuestion.title"
+                    name="username">
+            </div>
+            <div class="form-group">
+                <label>Topic</label>
+                <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="newQuestion.topic"
+                    name="username">
+            </div>
+            <div class="form-group">
+                <label> Question Description</label>
+                <textarea type="text" class="form-control" id="registrationUsername"
+                    [(ngModel)]="newQuestion.description_question" name="username"></textarea>
+            </div>
 
-    </form>
+            <div class="form-group">
+                <label> Image</label>
+                <input type="file" class="form-control" id="questionImage" name="img">
+            </div>
+
+
+            <button class="btn btn-success" type="submit">Submit</button>
+
+        </form>
+    </div>
 </div>

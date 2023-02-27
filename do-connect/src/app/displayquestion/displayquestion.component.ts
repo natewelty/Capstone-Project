@@ -20,21 +20,21 @@ id: number =1;
   
  
   
-question!:Question;
+question:Question = new Question;
 
 constructor(private userService:UserService, private questionService:QuestionService,private answerService:AnswerService, private route:ActivatedRoute, private router:Router){
   
 }
 
 ngOnInit(){
-  this.route.paramMap.subscribe(params=> this.id = params.get('id') as unknown as number);
+  this.route.paramMap.subscribe(params=> {this.id = params.get('id') as unknown as number
   console.log(this.id);
   let questionGrab = this.questionService.getQuestionById(this.id);
   console.log(questionGrab)
-  questionGrab.subscribe(q=>{this.question=q as Question;
-    
+  questionGrab.subscribe(q=>{this.question=q as Question;})
+
+});
   
-  })
   
 }
 

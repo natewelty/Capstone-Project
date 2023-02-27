@@ -26,7 +26,7 @@ export class SearchquestionComponent {
         this.router.navigateByUrl(`/displayquestion/${this.searchResponse[0].id}`);
       });
 
-    } else if(this.question.topic != null){
+    } else if(this.question.topic.length>1){
       console.log("searching by topic " + this.question.topic)
       let questionObserver = this.questionService.findByTopic(this.question.topic);
       questionObserver.subscribe(response =>{this.searchResponse =response as Question[];
@@ -34,7 +34,10 @@ export class SearchquestionComponent {
       })
     }
     else{
-      //search all
+      let questionObserver = this.questionService.getAllQuestions();
+      questionObserver.subscribe(response=>{this.searchResponse = response as Question[];
+      this.displayTopicResults=true;
+      })
     }
   }
 

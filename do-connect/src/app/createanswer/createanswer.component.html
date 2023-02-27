@@ -1,7 +1,7 @@
 <div>
     <div class="answerDisplay">
         <table *ngFor="let answer of answers">
-            <tr>
+            <tr *ngIf="answer.status">
                 <td [width]="600">Answer: {{answer.description_answer}}</td>
                 <td>from:{{answer.created_by}}</td>
             </tr>

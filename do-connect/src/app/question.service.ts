@@ -16,7 +16,7 @@ export class QuestionService {
     return this.httpClient.post(`${this.baseURL}/create`,question);
   }
   getAllQuestions():Observable<Question[]> {
-    return this.httpClient.get<Question[]>(`${this.baseURL}/read/all);`)
+    return this.httpClient.get<Question[]>(`${this.baseURL}/read/all`);
   }
   getQuestionById(id:number):Observable<Question> {
     return this.httpClient.get<Question>(`${this.baseURL}/read/id/${id}`);

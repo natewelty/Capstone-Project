@@ -13,11 +13,14 @@ export class RegistrationComponent {
   constructor(private userService:UserService, private router:Router){}
 
   attemptRegistration(){
-    this.userService.signup(this.registrationInfo).subscribe(data=>{
+    let newUserAttempt =this.userService.signup(this.registrationInfo)
+    newUserAttempt.subscribe(data=>{
       console.log(data);
-      this.goToHomePage();
-    },
-    error=>console.log(error))
+      this.registrationInfo = new UserCreateRequest("","","USER","","");
+      console.log(this.registrationInfo);
+      alert("User created");
+    });
+    
   }
 
   goToHomePage(){

@@ -16,7 +16,9 @@ export class CreateanswerComponent implements OnInit{
   @Input() questID!:number;
   answerRequest:AnswerRequest = new AnswerRequest(0,"","","");
   answers!:Answer[];
-  constructor(private userService:UserService, private answerService:AnswerService, private router:Router){}
+  constructor(private userService:UserService, private answerService:AnswerService, private router:Router){
+    this.getAnswers();
+  }
   ngOnInit(): void {
     this.getAnswers();
   }
@@ -41,6 +43,8 @@ onSubmit(){
 }
 getAnswers(){
   let answerGrab = this.answerService.getanswerbyqid(this.questID);
-    answerGrab.subscribe(a=>this.answers = a as Answer[]);
+    answerGrab.subscribe(a=>{this.answers = a as Answer[];
+      console.log("The answers have been loaded and should be displayed.");}
+      );
 }
 }

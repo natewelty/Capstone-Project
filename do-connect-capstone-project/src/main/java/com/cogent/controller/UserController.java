@@ -30,11 +30,11 @@ public class UserController {
 	}
 
 	@PostMapping("/user/adduser")
-	public String createUser(@RequestBody UserCreateRequest user) {
+	public void createUser(@RequestBody UserCreateRequest user) {
 
 		userService.createUser(user);
 
-		return "User created.";
+		
 	}
 
 	@PostMapping("/user/login")
