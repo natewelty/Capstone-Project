@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Chat } from 'app/chat';
 import { ChatService } from 'app/chat.service';
 import { ChatRequest } from 'app/chatrequest';
+import { User } from 'app/user';
 import { UserService } from 'app/user.service';
 
 @Component({
@@ -13,17 +14,21 @@ import { UserService } from 'app/user.service';
 export class ChatroomComponent  implements OnInit {
 
   fromUser = this.userService.user;
-  toUser!: number;
+  toUserId!: number;
   chatHistory!:Chat[];
   chatRequest!:ChatRequest;
+  toUser!: User;
   
   constructor(private userService:UserService, private router:Router, private chatService:ChatService, private route: ActivatedRoute){
   }
   ngOnInit() {
-    this.route.paramMap.subscribe(params => this.toUser = params.get('user2') as unknown as number);
-    console.log("to user is " + this.toUser);
+    this.route.paramMap.subscribe(params => this.toUserId = params.get('user2') as unknown as number);
+    console.log("to user is " + this.toUserId);
     this.getChat();
-    this.chatRequest = new ChatRequest(this.fromUser.id,this.toUser,"");
+    this.chatRequest = new ChatRequest(this.fromUser.id,this.toUserId,"");
+    let userGraber = this.userService.getUserById(this.toUserId);
+    userGraber.subscribe((response:any) => this.toUser = response as User);
+
     }
   
   
@@ -40,10 +45,11 @@ export class ChatroomComponent  implements OnInit {
     return true;
   }
   
+  
  
   getChat(){
-    let chatList = this.chatService.getHistory(this.fromUser.id,this.toUser);
-    console.log("to user is still " + this.toUser);
+    let chatList = this.chatService.getHistory(this.fromUser.id,this.toUserId);
+    console.log("to user is still " + this.toUserId);
     chatList.subscribe(response=>{this.chatHistory=response as Chat[];});
   }
 

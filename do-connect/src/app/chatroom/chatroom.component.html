@@ -1,4 +1,6 @@
 
+<!-- 
+    
 <div class="chatDisplay">
     <table *ngFor="let chat of chatHistory">
         <tr *ngIf="isCurrentUser(chat.from_user)">
@@ -29,5 +31,85 @@
 
         <button class="btn btn-success" type="submit">Submit Answer</button>
     </form>
-</div>
+</div> -->
 
+      
+
+
+
+
+
+<!-- reformated -->
+         <div class="message-background">  
+            <div class="message-chat">
+                <h1 style="text-align: center; color: white; ">Chat room</h1>
+              
+                <div class="chat-body" >
+                    <div *ngFor="let chat of chatHistory">
+                        <div *ngIf="isNotCurrentUser(chat.from_user)" class="message info" >
+                            <div class="message-body ">
+                                <div class="message-info">
+                                    <h4> {{toUser.name}} </h4>
+                                    <h5> <i class="fa fa-clock-o"></i>{{chat.datetime |date:'short'}}</h5>
+                                </div>
+                                <hr>
+                                <div class="message-text">
+                                    {{chat.message}}
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+    
+                        <div *ngIf="isCurrentUser(chat.from_user)" class="message my-message">
+                            
+                            <div class="message-body">
+                                <div class="message-body-inner">
+                                    <div class="message-info">
+                                        <h4> {{fromUser.name}} </h4>
+                                        <h5> <i class="fa fa-clock-o"></i> {{chat.datetime |date:'short'}} </h5>
+                                    </div>
+                                    <hr>
+                                    <div class="message-text">
+                                        {{chat.message}}
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                  
+                </div>
+
+        
+        <div>
+            <form (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <div class="chat-footer">
+                        <textarea class="send-message-text form-control" id="createanswer"[(ngModel)]="chatRequest.message"
+                        name="createanswer"></textarea>
+                        
+                        <button type="submit" class=" btn btn-success send-message-button btn-info"> send </button>
+                    </div>
+            
+                </div>
+        
+            
+            </form>
+        </div>
+       
+
+    </div>
+</div>
+                
+                  
+        
+
+
+                
+                     
+          
+                         
+                    
+         
+                
