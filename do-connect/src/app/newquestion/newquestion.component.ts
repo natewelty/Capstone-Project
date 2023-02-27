@@ -31,4 +31,7 @@ export class NewquestionComponent {
     console.log(this.newQuestion);
     this.addQuestion();
   }
+  save(image_src:string){
+    this.newQuestion.image_src=image_src;
+  }
 }

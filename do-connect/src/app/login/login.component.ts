@@ -22,7 +22,11 @@ export class LoginComponent {
       user.subscribe(u=>{
         console.log("This is u: ");
         console.log(u);
-        this.userService.setUser(u)});
+        this.userService.setUser(u);
+        this.loginInfo = new UserAuthenticationRequest("","");
+        alert("Login successful.");
+        this.goToHomePage();
+      });
         
       
     },

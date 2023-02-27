@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Answer } from 'app/answer';
 import { AnswerService } from 'app/answer.service';
+import { FileUploadService } from 'app/fileuploader.service';
 import { Question } from 'app/question';
 import { QuestionService } from 'app/question.service';
 import { User } from 'app/user';
@@ -18,11 +19,11 @@ export class DisplayquestionComponent {
   
 id: number =1;
   
- 
+imageToShow?:any;
   
 question:Question = new Question;
 
-constructor(private userService:UserService, private questionService:QuestionService,private answerService:AnswerService, private route:ActivatedRoute, private router:Router){
+constructor(private userService:UserService, private fileService:FileUploadService, private questionService:QuestionService,private answerService:AnswerService, private route:ActivatedRoute, private router:Router){
   
 }
 
@@ -31,7 +32,14 @@ ngOnInit(){
   console.log(this.id);
   let questionGrab = this.questionService.getQuestionById(this.id);
   console.log(questionGrab)
-  questionGrab.subscribe(q=>{this.question=q as Question;})
+  questionGrab.subscribe(q=>{this.question=q as Question;
+    let imageGrab = this.fileService.getFile(this.question.image_src); 
+    imageGrab.subscribe(response=>{
+      this.createImageFromBlob(response);
+      
+
+    })
+  })
 
 });
   
@@ -45,5 +53,16 @@ checkLoad():boolean{
   }
   return false;
 
+}
+
+createImageFromBlob(image: Blob) {
+  let reader = new FileReader();
+  reader.addEventListener("load", () => {
+     this.imageToShow = reader.result;
+  }, false);
+
+  if (image) {
+     reader.readAsDataURL(image);
+  }
 }
 }
