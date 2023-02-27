@@ -23,7 +23,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 @EnableWebSecurity
 @Configuration
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
-public class WebSecurityConfig {
+public class WebSecurityConfig{
 	@Value("${spring.security.debug:false}")
     boolean securityDebug;
 	
@@ -35,12 +35,14 @@ public class WebSecurityConfig {
 		      .cors()
 		      .and()
 		      .authorizeHttpRequests()
-		      .requestMatchers("/css/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico")
+		      .requestMatchers("/css/**", "/js/**", "/img/**", "/lib/**", "/favicon.ico","/file/read/**")
 		      .permitAll()
 		      .requestMatchers(HttpMethod.POST, AuthenticationConfigConstants.SIGN_UP_URL)
 		      .permitAll()
 		      .requestMatchers("/user/login/**")
 		      .anonymous()
+		      .requestMatchers(HttpMethod.DELETE)
+		      .hasRole("admin")
 		      .anyRequest()
 		      .authenticated()
 		      .and()

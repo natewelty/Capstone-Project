@@ -18,6 +18,7 @@ import { ChatdashboardComponent } from './chatdashboard/chatdashboard.component'
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { FileuploadcomponentComponent } from './fileuploadcomponent/fileuploadcomponent.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -37,7 +38,8 @@ export function tokenGetter() {
     PendingquestionComponent,
     ChatdashboardComponent,
     ChatroomComponent,
-    HomeComponent
+    HomeComponent,
+    FileuploadcomponentComponent
   ],
   imports: [
     BrowserModule,

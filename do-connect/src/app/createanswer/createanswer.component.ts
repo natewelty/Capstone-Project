@@ -17,7 +17,7 @@ export class CreateanswerComponent implements OnInit{
   answerRequest:AnswerRequest = new AnswerRequest(0,"","","");
   answers!:Answer[];
   constructor(private userService:UserService, private answerService:AnswerService, private router:Router){
-    this.getAnswers();
+    
   }
   ngOnInit(): void {
     this.getAnswers();
