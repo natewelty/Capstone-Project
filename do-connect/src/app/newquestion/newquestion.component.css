@@ -1,22 +1,36 @@
 .newQuestionForm{
     width:40%; 
     margin: auto;
-    height: 60%;
+    height: 70%;
     color: aliceblue;
     border-radius: 15px;
-    background-color: black;
+    background-color: rgb(26, 24, 24);
 }
 .gradient-custom {
     /* fallback for old browsers */
+    padding-top: 200px;
     height: 100vh;
     width: 100%;
     background: #6a11cb;
-    
-    margin-bottom:5%;
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+  .questionForm{
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .cus{
+    height: 200px;
+    overflow: scroll;
+  }
+
+
+  .button{
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
  

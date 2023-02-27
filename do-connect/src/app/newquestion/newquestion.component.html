@@ -1,29 +1,34 @@
 <div class="gradient-custom">
 
-    
         <div class="newQuestionForm">
-            <h3> Submit a Question </h3>
-            <form (ngSubmit)="onSubmit()">
-                <div class="form-group">
+            <h3 style="text-align: center;"> Submit a Question </h3>
+            <form  class="form-horizontal"(ngSubmit)="onSubmit()">
+                <div class="form-group questionForm searchForm">
                     <label> Title</label>
-                    <input type="text" class="form-control" id="registrationName" [(ngModel)]="newQuestion.title"
+                    <input  class="form-control" id="registrationName" [(ngModel)]="newQuestion.title"
                         name="username">
                 </div>
-                <div class="form-group">
+                <div class="form-group questionForm searchForm">
                     <label>Topic</label>
                     <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="newQuestion.topic"
                         name="username">
                 </div>
-                <div class="form-group">
+                <div class="form-group questionForm searchForm">
                     <label> Question Description</label>
-                    <textarea type="text" class="form-control" id="registrationUsername"
+                    <textarea type="text" class="form-control cus" id="registrationUsername"
                         [(ngModel)]="newQuestion.description_question" name="username"></textarea>
                 </div>
 
-                <app-fileuploadcomponent (newFileUploadEvent)="save($event)"></app-fileuploadcomponent>>
+                <div class="questionForm">
+                    <app-fileuploadcomponent (newFileUploadEvent)="save($event)"></app-fileuploadcomponent>>
+                </div>
+
+                <div class="questionForm">
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </div>
 
 
-                <button class="btn btn-success" type="submit">Submit</button>
+              
 
             </form>
         </div>

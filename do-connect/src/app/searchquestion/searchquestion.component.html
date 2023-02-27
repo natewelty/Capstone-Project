@@ -1,28 +1,31 @@
 <div class="backgroundImage">
 
-
     <div class="searchBoxes">
+        
+        <h3 style="text-align: center; color:white"> Search   Question </h3>
 
         <form (ngSubmit)="onSubmit()">
 
-            <div class="form-group">
+            <div class="form-group searchForm" style="padding-top: 50px">
                 <label class="searchLabel"> <b>Question ID</b></label>
                 <input type="number" class="form-control" id="searchquestionid" [(ngModel)]="question.id" name="id">
             </div>
 
-            <div class="form-group">
+            <div class="form-group searchForm">
                 <label class="searchLabel"><b>Title</b></label>
                 <input type="text" class="form-control" id="searchquestiontitle" [(ngModel)]="question.title"
                     name="title">
             </div>
-            <div class="form-group">
+            <div class="form-group searchForm">
                 <label class="searchLabel"><b>Topic</b></label>
                 <input type="text" class="form-control" id="searchquestiontopic" [(ngModel)]="question.topic"
                     name="topic">
             </div>
 
-
-            <button class="btn btn-success" type="submit">Submit</button>
+            <div class="searchForm">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+            
 
         </form>
 
