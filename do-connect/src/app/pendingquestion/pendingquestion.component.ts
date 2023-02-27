@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FileUploadService } from 'app/fileuploader.service';
 
 import { Question } from 'app/question';
 import { QuestionService } from 'app/question.service';
@@ -11,7 +12,9 @@ import { QuestionService } from 'app/question.service';
 })
 export class PendingquestionComponent implements OnInit{
   tableData:any[]=[{}];
-  constructor(private questionService:QuestionService, private router:Router) {}
+  imageToShow:any;
+  showImage:boolean=false;
+  constructor(private questionService:QuestionService, private router:Router, private fileService:FileUploadService) {}
   ngOnInit(): void {
     this.getTable();
   }
@@ -35,6 +38,24 @@ export class PendingquestionComponent implements OnInit{
       console.log("Deleted");
       this.getTable();
     });
+  }
+  showQuestionImage(img_src:string){
+    let imageGrab = this.fileService.getFile(img_src);
+    imageGrab.subscribe(response => { this.createImageFromBlob(response) 
+    this.showImage=true;
+    });
+  }
+  
+
+  createImageFromBlob(image: Blob) {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
+       this.imageToShow = reader.result;
+    }, false);
+  
+    if (image) {
+       reader.readAsDataURL(image);
+    }
   }
 
 

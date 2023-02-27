@@ -1,7 +1,7 @@
 <div class="questionDisplay" *ngIf="checkLoad()">
     <h1>{{question.title}}</h1>
     <h2>in {{question.topic}}</h2>
-    <img [src] = "imageToShow"/>
+    <img [src] = "imageToShow" alt="../../assets/src_imgs/R.png"/>
     <p>{{question.description_question}}</p>
     <p>Created by: {{question.qcreated_by}} on {{question.datetime}}</p>
 </div>

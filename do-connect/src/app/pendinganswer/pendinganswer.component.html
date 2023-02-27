@@ -1,4 +1,4 @@
-<h3>Answers</h3>
+<!-- <h3>Answers</h3>
 <table *ngFor="let answer of tableData; index as i;" class="answerGrid">
     <tr>
         <td>{{answer.id}}</td>
@@ -8,5 +8,41 @@
         <td><button (click)="accept(i)">Approve</button></td>
         <td><button (click) ="reject(i)">Reject</button></td>
     </tr>
+</table> -->
+
+<h1>Pending Answers</h1>
+
+<table  class="table table-bordered border-dark  table-sm">
+    <thead>
+        <tr class="table-dark">
+           <td><h3>Id</h3></td>
+           <td><h3>QID</h3></td>
+           <td><h3>Desc</h3></td>
+           <td><h3>Author</h3></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+        </tr>
+        
+
+    </thead>
+    
+        <tbody *ngFor="let answer of tableData; index as i;"  >
+                <tr class = "border border-3  border-dark " >
+                    <td class = "border border-3  border-dark ">{{answer.id}}</td>
+                    <td class = "border border-3  border-dark ">{{answer.qid}}</td>
+                    <td class = "border border-3  border-dark ">{{answer.description_answer}}</td>
+                    <td class = "border border-3  border-dark ">{{answer.created_by}}</td>
+                    <td class = "border border-3  border-dark ">{{answer.img_src}}</td>
+                    <td  class="text-dark border border-3  border-dark"><button *ngIf="answer.img_src" class = "btn btn-dark" (click)="showAnswerImage(answer.img_src)">Approve</button></td>
+                    <td  class="text-dark border border-3  border-dark"><button  class = "btn btn-dark" (click)="accept(i)">Approve</button></td>
+                    <td  class="text-dark border border-3  border-dark"><button class = "btn btn-dark" (click) ="reject(i)">Reject</button></td>
+                </tr>
+        </tbody>        
+
 </table>
 
+<div class = "imageShow" *ngIf="showImage">
+    <img [src]="imageToShow" alt='../../assets/src_imgs/homepage2.jpeg'>
+</div>

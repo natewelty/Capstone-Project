@@ -58,6 +58,7 @@ export class ChatroomComponent  implements OnInit {
     chatSent.subscribe(response=>{
       console.log(this.chatRequest);
       this.getChat();
+      this.chatRequest.message="";
     });
   }
  

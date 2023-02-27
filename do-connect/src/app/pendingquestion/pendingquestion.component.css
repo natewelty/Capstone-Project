@@ -16,3 +16,13 @@ h1,h3{
     border-right-width: 10px;
     
 }
+.pendingTable{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+}
+.imageShow{
+    max-width: 15%;
+    max-height: 15%;
+    
+}

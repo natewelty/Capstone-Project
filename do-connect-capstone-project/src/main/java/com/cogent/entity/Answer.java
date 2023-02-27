@@ -25,6 +25,7 @@ private boolean status;
 private OffsetDateTime datetime;
 @ManyToOne()
 private Question question;
+private int qid;
 // @OneToOne
 private String approved_by;
 // @OneToOne
@@ -39,6 +40,7 @@ public Answer (AnswerRequest answerRequest) {
 	this.status=false;
 	this.question = answerRequest.getQuestion();
 	this.question.addAnswer(this);
+	this.qid=this.question.getId();
 	this.created_by=answerRequest.created_by;
 	
 }
@@ -52,6 +54,7 @@ public Answer(int id, String description_answer, String img_src, boolean status,
 	this.status = status;
 	this.datetime = datetime;
 	this.question = question;
+	this.qid=this.question.getId();
 	this.approved_by = approved_by;
 	this.created_by = created_by;
 	question.addAnswer(this);

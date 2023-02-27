@@ -1,30 +1,31 @@
-<div class="background">
+<div class="gradient-custom">
+
+    
+        <div class="newQuestionForm">
+            <h3> Submit a Question </h3>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label> Title</label>
+                    <input type="text" class="form-control" id="registrationName" [(ngModel)]="newQuestion.title"
+                        name="username">
+                </div>
+                <div class="form-group">
+                    <label>Topic</label>
+                    <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="newQuestion.topic"
+                        name="username">
+                </div>
+                <div class="form-group">
+                    <label> Question Description</label>
+                    <textarea type="text" class="form-control" id="registrationUsername"
+                        [(ngModel)]="newQuestion.description_question" name="username"></textarea>
+                </div>
+
+                <app-fileuploadcomponent (newFileUploadEvent)="save($event)"></app-fileuploadcomponent>>
 
 
-    <div class="newQuestionForm">
-        <h3> Submit a Question </h3>
-        <form (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label> Title</label>
-                <input type="text" class="form-control" id="registrationName" [(ngModel)]="newQuestion.title"
-                    name="username">
-            </div>
-            <div class="form-group">
-                <label>Topic</label>
-                <input type="text" class="form-control" id="registrationEmail" [(ngModel)]="newQuestion.topic"
-                    name="username">
-            </div>
-            <div class="form-group">
-                <label> Question Description</label>
-                <textarea type="text" class="form-control" id="registrationUsername"
-                    [(ngModel)]="newQuestion.description_question" name="username"></textarea>
-            </div>
+                <button class="btn btn-success" type="submit">Submit</button>
 
-            <app-fileuploadcomponent (newFileUploadEvent)="save($event)"></app-fileuploadcomponent>>
-
-
-            <button class="btn btn-success" type="submit">Submit</button>
-
-        </form>
-    </div>
+            </form>
+        </div>
+    
 </div>
