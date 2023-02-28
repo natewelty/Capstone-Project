@@ -1,29 +1,35 @@
 <!-- <form (ngSubmit)="onSubmit()">
     <button class = "btn btn-success" type ="submit">Get All Users</button>
 </form> -->
-
-<table class="table table-bordered border-dark  table-sm">
-    <thead >
-        <tr class="table-dark">
-            
-            <th>ID</th>
-            <th>Name</th>
-            <th>Action</th>
-        </tr>
+<div class = "gradient-custom">
+    <div style="padding-top: 80px">
+        <table class="table table-bordered border-dark  table-sm">
        
-    </thead>
-    <tbody *ngFor="let user of tableData;" >
-        <tr class = "border border-3  border-dark " *ngIf="notCurrentUser(user)">
-            
-            <td class = "border border-3  border-dark " >{{user.id}}</td>
-            <td class = "border border-3  border-dark ">{{user.name}}</td>
-            <td class="text-dark border border-3  border-dark">
-                 <button class = "btn btn-dark" type="button" (click)="onClick(user.id)"> Chat Now</button>
-            </td>
+            <thead >
+                <tr class="table-dark" >
+                    
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+               
+            </thead>
+            <tbody *ngFor="let user of tableData;" >
+                <tr class = "border border-3  border-dark " *ngIf="notCurrentUser(user)">
+                    
+                    <td class = "border border-3  border-dark " >{{user.id}}</td>
+                    <td class = "border border-3  border-dark " >{{user.name}}</td>
+                    <td class="text-dark border border-3  border-dark">
+                         <button class = "btn btn-dark" type="button" (click)="onClick(user.id)"> Chat Now</button>
+                    </td>
+                   
+                </tr>
+            </tbody>
            
-        </tr>
-    </tbody>
+            
+            
+        </table>
+    </div>
    
     
-    
-</table>
+</div>
