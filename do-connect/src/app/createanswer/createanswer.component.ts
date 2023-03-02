@@ -22,8 +22,9 @@ export class CreateanswerComponent implements OnInit {
   displayAnswers: boolean = false;
   displayAnswerImage:boolean=false;
 
-  sub=interval(500).subscribe((u:any)=>{this.getAnswers();
-  this.sub.unsubscribe;
+  sub=interval(500).subscribe((u:any)=>{
+    this.getAnswers();
+    this.sub.unsubscribe();
   });
   
 
