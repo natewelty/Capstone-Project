@@ -10,7 +10,7 @@ import { User } from './user';
 })
 export class AnswerService {
 
-  private baseURL = "http://localhost:8080/answer"
+  private baseURL = "http://3.16.113.202:8080/answer"
 
   constructor(private httpClient: HttpClient) { }
 

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cogent.entity.Chat;
 import com.cogent.requests.ChatRequest;
 import com.cogent.service.ChatService;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin()
 @RestController
 public class ChatController {
 

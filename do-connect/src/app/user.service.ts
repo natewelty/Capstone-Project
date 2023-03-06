@@ -13,7 +13,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class UserService {
   user = new User(0,"",",",",","",{id:0,authority:""});
-  private baseURL= "http://localhost:8080/user"
+  private baseURL= "http://3.16.113.202:8080/user"
   constructor(private httpClient: HttpClient, private jwtHelper:JwtHelperService) { }
 
   signup(user:UserCreateRequest):Observable<Object>{

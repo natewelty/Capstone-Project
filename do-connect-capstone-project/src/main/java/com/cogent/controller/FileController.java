@@ -23,7 +23,7 @@ import com.cogent.entity.FileInfo;
 import com.cogent.entity.ResponseMessage;
 import com.cogent.service.FileService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin()
 @RestController
 public class FileController {
 

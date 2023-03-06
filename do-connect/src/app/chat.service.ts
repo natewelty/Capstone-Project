@@ -9,7 +9,7 @@ import { ChatRequest } from './chatrequest';
   providedIn: 'root'
 })
 export class ChatService {
-  private baseURL= "http://localhost:8080/chat"
+  private baseURL= "http://3.16.113.202:8080/chat"
   constructor(private httpClient: HttpClient, private jwtHelper:JwtHelperService) { }
   
   Addmsg(chat:ChatRequest):Observable<Object>{

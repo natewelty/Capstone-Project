@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\nate\Capstone\Capstone\do-connect-capstone-project"/>
 			<item value="C:\Users\nate\eclipse-workspace\Cogent\CogentUniversity\do-connect-capstone-project"/>
 		</list>
 		<list key="projectNameTemplate">

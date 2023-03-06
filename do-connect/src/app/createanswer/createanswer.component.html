@@ -6,7 +6,7 @@
                 <!-- <td><img [src] = "imageToShow[i]"/></td> -->
                 <td>Answer: {{answer.description_answer}}</td>
                 <td>from:{{answer.created_by}}</td>
-                <td><button (click)="getImage(answer.img_src)">See Image</button></td>
+                <td><button *ngIf="answer.img_src" (click)="getImage(answer.img_src)">See Image</button></td>
             </tr>
         </table>
     </div>

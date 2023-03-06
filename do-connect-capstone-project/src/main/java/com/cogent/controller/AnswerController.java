@@ -18,7 +18,7 @@ import com.cogent.entity.Answer;
 import com.cogent.requests.AnswerRequest;
 import com.cogent.service.AnswerService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin()
 @RestController
 public class AnswerController {
 	@Autowired

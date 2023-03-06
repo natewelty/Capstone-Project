@@ -9,7 +9,7 @@ import { Question } from './question';
 })
 export class QuestionService {
 
-  private baseURL = "http://localhost:8080/question"
+  private baseURL = "http://3.16.113.202:8080/question"
   constructor(private httpClient:HttpClient) { }
 
   addQuestion(question:QuestionRequest):Observable<object> { 

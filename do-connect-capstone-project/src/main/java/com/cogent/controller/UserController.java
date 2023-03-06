@@ -18,7 +18,7 @@ import com.cogent.requests.UserCreateRequest;
 import com.cogent.requests.UserRequest;
 import com.cogent.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin()
 @RestController
 public class UserController {
 	@Autowired

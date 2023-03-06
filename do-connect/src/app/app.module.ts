@@ -48,8 +48,8 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["localhost:8080"],
-        disallowedRoutes: ["localhost:8080/user/login", "localhost:8080/user/adduser"],}}),
+        allowedDomains: ["3.16.113.202:8080"],
+        disallowedRoutes: ["3.16.113.202:8080/user/login", "3.16.113.202:8080/user/adduser"],}}),
     HttpClientModule,
     NgbModule
 
